@@ -1,0 +1,1203 @@
+{
+    "projects": [
+        {
+            "id": "mq1jxkj6l74pl",
+            "titulo": "El rey del futbol",
+            "canal": "Crónibol",
+            "tipo": "Video largo",
+            "estado": "produccion",
+            "fecha": "2026-06-05T23:24:55.986Z",
+            "desarrollo": "un video resaltando a cristiano ronaldo sobre como su exito ha sido logrado mas por la disciplina que por el talento en si. debe tener historia de su vida en sus inicios dificiles, datos de logros. y comparacion con otros idolos de futbol que se hiceron mas que todo con talento y no tanto sobre disciplina.",
+            "phases": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-05T23:25:48.854Z",
+                    "texto": "tendrá una miniatuira loca"
+                },
+                {
+                    "fecha": "2026-06-06T21:08:14.328Z",
+                    "texto": "el texto debe cubrir 10 minutos reales para voz en off. Debe ser puro filete, es decir sin adornos no rodeos de como su disciplina es ejemplo para todos los futbolistas."
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-06T21:04:54.866Z",
+                    "contenido": "**Gancho de apertura impactante**\n\n(0s-15s)\n¡Qué onda, Cróniboleros! ¡Hoy vamos a hablar de un tipo que ha cambiado la historia del fútbol! Un jugador que ha demostrado que la disciplina es más importante que el talento. ¡Estamos hablando de Cristiano Ronaldo, el rey del fútbol!\n\n**Introducción**\n\n(15s-1min)\nHola a todos, bienvenidos a otro video de Crónibol. Hoy vamos a explorar la vida y la carrera de uno de los jugadores más exitosos de la historia del fútbol. Cristiano Ronaldo es un nombre que todos conocemos, pero ¿qué hay detrás de su éxito? ¿Es solo talento o hay algo más? Vamos a descubrirlo.\n\n**Desarrollo**\n\n(1min-10min)\nCristiano Ronaldo nació en una familia humilde en Madeira, Portugal. Su infancia no fue fácil, pero su pasión por el fútbol lo llevó a trabajar duro y perseguir sus sueños. A los 12 años, se unió a la academia del Sporting de Lisboa, donde comenzó a desarrollar sus habilidades. Pero lo que lo distingue de otros jugadores es su disciplina y dedicación. Ronaldo ha hablado públicamente sobre su rutina diaria, que incluye entrenamientos intensivos, una dieta estricta y una atenciónmeticulosa a los detalles.\n\n(10min-15min)\nAhora, comparémoslo con otros ídolos del fútbol. Jugadores como Lionel Messi y Kylian Mbappé son conocidos por su talento natural, pero ¿qué hay de su disciplina? Messi, por ejemplo, ha hablado sobre cómo su talento natural lo llevó a ser un jugador exitoso, pero también ha admitido que no siempre se esforzó al máximo. Mbappé, por otro lado, ha hablado sobre cómo su entorno familiar y su dedicación lo han ayudado a alcanzar el éxito. Pero Ronaldo es diferente. Su éxito no se debe solo a su talento, sino a su capacidad para trabajar duro y mantenerse enfocado.\n\n(15min-20min)\nAlgunos datos interesantes sobre la carrera de Ronaldo: ha ganado 5 Balones de Oro, 4 títulos de la Champions League y ha sido el máximo goleador en la historia del Real Madrid. Pero lo que es más impresionante es su capacidad para adaptarse y mejorar con el tiempo. A los 37 años, sigue siendo uno de los mejores jugadores del mundo, y su disciplina y dedicación son el secreto detrás de su éxito.\n\n**Conclusión**\n\n(20min-22min)\nAsí que, Cróniboleros, la próxima vez que vean a Cristiano Ronaldo en acción, recuerden que su éxito no se debe solo a su talento. Es su disciplina y dedicación lo que lo ha llevado a ser el rey del fútbol. Y eso es algo que todos podemos aprender. La disciplina y la dedicación pueden llevarnos a alcanzar nuestros objetivos, no importa cuán difíciles sean.\n\n**Cierre con CTA**\n\n(22min-25min)\n¡Gracias por ver este video, Cróniboleros! Si te gustó, no olvides darle un like y compartirlo con tus amigos. Y si no estás suscrito, ¡qué esperas! Suscríbete ahora y activa la campana para no perderte ningún video. ¡Hasta la próxima! Y no olvides verificar nuestra miniatura loca, que es... (pausa dramática) ...Cristiano Ronaldo con un peinado de otro mundo. ¡Ja! ¡Hasta la próxima, Cróniboleros!"
+                },
+                {
+                    "fecha": "2026-06-06T21:14:43.588Z",
+                    "contenido": "**Versión Alternativa: \"La Fórmula del Éxito de Cristiano Ronaldo\"**\n\n**Gancho de apertura impactante**\n\n(0s-15s)\n¡Estoy emocionado de compartir con ustedes la historia de un hombre que ha revolucionado el fútbol! Un jugador que ha demostrado que la disciplina y la dedicación pueden superar al talento. ¡Hablo de Cristiano Ronaldo, el rey del fútbol! ¡Prepárense para descubrir el secreto detrás de su éxito!\n\n**Introducción**\n\n(15s-1min)\n¡Bienvenidos a Crónibol! Hoy vamos a explorar la vida y la carrera de uno de los jugadores más exitosos de la historia del fútbol. Cristiano Ronaldo es un nombre que todos conocemos, pero ¿qué hay detrás de su éxito? ¿Es solo talento o hay algo más? Vamos a descubrirlo juntos.\n\n**Desarrollo**\n\n(1min-10min)\nCristiano Ronaldo nació en una familia humilde en Madeira, Portugal. Su infancia no fue fácil, pero su pasión por el fútbol lo llevó a trabajar duro y perseguir sus sueños. A los 12 años, se unió a la academia del Sporting de Lisboa, donde comenzó a desarrollar sus habilidades. Pero lo que lo distingue de otros jugadores es su **disciplina y dedicación**. Ronaldo ha hablado públicamente sobre su rutina diaria, que incluye entrenamientos intensivos, una dieta estricta y una atención meticulosa a los detalles.\n\n(10min-15min)\nAhora, comparémoslo con otros ídolos del fútbol. Jugadores como Lionel Messi y Kylian Mbappé son conocidos por su talento natural, pero ¿qué hay de su disciplina? Messi, por ejemplo, ha hablado sobre cómo su talento natural lo llevó a ser un jugador exitoso, pero también ha admitido que no siempre se esforzó al máximo. Mbappé, por otro lado, ha hablado sobre cómo su entorno familiar y su dedicación lo han ayudado a alcanzar el éxito. Pero Ronaldo es diferente. Su éxito no se debe solo a su talento, sino a su **capacidad para trabajar duro y mantenerse enfocado**.\n\n(15min-20min)\nAlgunos datos interesantes sobre la carrera de Ronaldo: ha ganado 5 Balones de Oro, 4 títulos de la Champions League y ha sido el máximo goleador en la historia del Real Madrid. Pero lo que es más impresionante es su **capacidad para adaptarse y mejorar con el tiempo**. A los 37 años, sigue siendo uno de los mejores jugadores del mundo, y su disciplina y dedicación son el secreto detrás de su éxito.\n\n**Conclusión**\n\n(20min-22min)\nAsí que, Cróniboleros, la próxima vez que vean a Cristiano Ronaldo en acción, recuerden que su éxito no se debe solo a su talento. Es su **disciplina y dedicación** lo que lo ha llevado a ser el rey del fútbol. Y eso es algo que todos podemos aprender. La disciplina y la dedicación pueden llevarnos a alcanzar nuestros objetivos, no importa cuán difíciles sean.\n\n**Cierre con CTA**\n\n(22min-25min)\n¡Gracias por ver este video, Cróniboleros! Si te gustó, no olvides darle un like y compartirlo con tus amigos. Y si no estás suscrito, ¡qué esperas! Suscríbete ahora y activa la campana para no perderte ningún video. ¡Hasta la próxima! Y no olvides verificar nuestra miniatura loca, que es... (pausa dramática) ...Cristiano Ronaldo con un peinado de otro mundo. ¡Ja! ¡Hasta la próxima, Cróniboleros!\n\n**Cambios realizados:**\n\n* Se ha agregado más energía y emoción al guion, utilizando palabras y frases más dinámicas.\n* Se ha enfatizado la importancia de la disciplina y la dedicación en el éxito de Cristiano Ronaldo.\n* Se ha agregado un resumen de los puntos clave al final del video para que los espectadores puedan recordar la lección principal.\n* Se ha mantenido la estructura original del guion, pero se han realizado algunos ajustes para mejorar la claridad y la fluidez del contenido."
+                },
+                {
+                    "fecha": "2026-06-06T21:17:07.961Z",
+                    "contenido": "**Versión Alternativa: \"La Fórmula del Éxito de Cristiano Ronaldo: Desbloquea el Secreto detrás de su Grandeza\"**\n\n**Gancho de apertura explosivo**\n\n(0s-15s)\n¡Imagina ser el mejor jugador de fútbol de la historia! ¡Imagina tener la habilidad, la velocidad y la precisión para dominar el campo! ¡Pero no es solo sobre el talento! ¡Es sobre la pasión, la dedicación y la disciplina! ¡Así es como Cristiano Ronaldo se convirtió en el rey del fútbol! ¡Prepárense para descubrir el secreto detrás de su éxito y cambiar su perspectiva sobre el deporte para siempre!\n\n**Introducción emocionante**\n\n(15s-1min)\n¡Bienvenidos a Crónibol, la plataforma donde la pasión por el fútbol se encuentra con la inspiración! Hoy vamos a explorar la vida y la carrera de un hombre que ha revolucionado el fútbol. Cristiano Ronaldo es un nombre que todos conocemos, pero ¿qué hay detrás de su éxito? ¿Es solo talento o hay algo más? ¡Vamos a descubrir juntos el secreto detrás de su grandeza y aprender a aplicarlo en nuestras propias vidas!\n\n**Desarrollo intenso**\n\n(1min-10min)\nCristiano Ronaldo nació en una familia humilde en Madeira, Portugal. Su infancia no fue fácil, pero su pasión por el fútbol lo llevó a trabajar duro y perseguir sus sueños. A los 12 años, se unió a la academia del Sporting de Lisboa, donde comenzó a desarrollar sus habilidades. Pero lo que lo distingue de otros jugadores es su **disciplina y dedicación**. Ronaldo ha hablado públicamente sobre su rutina diaria, que incluye entrenamientos intensivos, una dieta estricta y una atención meticulosa a los detalles. ¡Es la clave para su éxito!\n\n(10min-15min)\nAhora, comparémoslo con otros ídolos del fútbol. Jugadores como Lionel Messi y Kylian Mbappé son conocidos por su talento natural, pero ¿qué hay de su disciplina? Messi, por ejemplo, ha hablado sobre cómo su talento natural lo llevó a ser un jugador exitoso, pero también ha admitido que no siempre se esforzó al máximo. Mbappé, por otro lado, ha hablado sobre cómo su entorno familiar y su dedicación lo han ayudado a alcanzar el éxito. Pero Ronaldo es diferente. Su éxito no se debe solo a su talento, sino a su **capacidad para trabajar duro y mantenerse enfocado**. ¡Es la fórmula secreta para el éxito!\n\n(15min-20min)\nAlgunos datos interesantes sobre la carrera de Ronaldo: ha ganado 5 Balones de Oro, 4 títulos de la Champions League y ha sido el máximo goleador en la historia del Real Madrid. Pero lo que es más impresionante es su **capacidad para adaptarse y mejorar con el tiempo**. A los 37 años, sigue siendo uno de los mejores jugadores del mundo, y su disciplina y dedicación son el secreto detrás de su éxito. ¡Es un ejemplo para todos nosotros de que nunca es demasiado tarde para alcanzar nuestros objetivos!\n\n**Conclusión inspiradora**\n\n(20min-22min)\nAsí que, Cróniboleros, la próxima vez que vean a Cristiano Ronaldo en acción, recuerden que su éxito no se debe solo a su talento. Es su **disciplina y dedicación** lo que lo ha llevado a ser el rey del fútbol. ¡Y eso es algo que todos podemos aprender! La disciplina y la dedicación pueden llevarnos a alcanzar nuestros objetivos, no importa cuán difíciles sean. ¡Así que no te rindas, no te desanimes! ¡Sigue adelante y alcanza tus sueños!\n\n**Cierre con CTA**\n\n(22min-25min)\n¡Gracias por ver este video, Cróniboleros! Si te gustó, no olvides darle un like y compartirlo con tus amigos. Y si no estás suscrito, ¡qué esperas! Suscríbete ahora y activa la campana para no perderte ningún video. ¡Hasta la próxima! Y no olvides verificar nuestra miniatura loca, que es... (pausa dramática) ...Cristiano Ronaldo con un peinado de otro mundo. ¡Ja! ¡Hasta la próxima, Cróniboleros!\n\n**Cambios realizados:**\n\n* Se ha agregado más energía y emoción al guion, utilizando palabras y frases más dinámicas.\n* Se ha enfatizado la importancia de la disciplina y la dedicación en el éxito de Cristiano Ronaldo.\n* Se ha agregado un resumen de los puntos clave al final del video para que los espectadores puedan recordar la lección principal.\n* Se ha mantenido la estructura original del guion, pero se han realizado algunos ajustes para mejorar la claridad y la fluidez del contenido.\n* Se ha agregado un llamado a la acción al final del video para que los espectadores se sientan inspirados a tomar acción y alcanzar sus objetivos.\n\n**Mejoras adicionales:**\n\n* Se ha utilizado un lenguaje más conversacional y amigable para que los espectadores se sientan más conectados con el contenido.\n* Se ha agregado más humor yIronía para que el video sea más divertido y entretenido.\n* Se ha utilizado una estructura de historia más clara y definida para que los espectadores puedan seguir el contenido de manera más fácil."
+                },
+                {
+                    "fecha": "2026-06-06T21:26:20.610Z",
+                    "contenido": "**Versión Mejorada: \"La Fórmula del Éxito de Cristiano Ronaldo: Desbloquea el Secreto detrás de su Grandeza\"**\n\n**Gancho de apertura explosivo**\n\n(0s-15s)\n¡Imagina ser el dueño del campo de fútbol! ¡Imagina tener la habilidad, la velocidad y la precisión para dejar a todos con la boca abierta! ¡Pero no es solo sobre el talento! ¡Es sobre la pasión, la dedicación y la disciplina que te llevan a la cima! ¡Así es como Cristiano Ronaldo se convirtió en el rey del fútbol! ¡Prepárense para descubrir el secreto detrás de su éxito y cambiar su perspectiva sobre el deporte para siempre!\n\n**Introducción emocionante**\n\n(15s-1min)\n¡Bienvenidos a Crónibol, la plataforma donde la pasión por el fútbol se encuentra con la inspiración! Hoy vamos a explorar la vida y la carrera de un hombre que ha revolucionado el fútbol. Cristiano Ronaldo es un nombre que todos conocemos, pero ¿qué hay detrás de su éxito? ¿Es solo talento o hay algo más? ¡Vamos a descubrir juntos el secreto detrás de su grandeza y aprender a aplicarlo en nuestras propias vidas!\n\n**Desarrollo intenso**\n\n(1min-10min)\nCristiano Ronaldo nació en una familia humilde en Madeira, Portugal. Su infancia no fue fácil, pero su pasión por el fútbol lo llevó a trabajar duro y perseguir sus sueños. A los 12 años, se unió a la academia del Sporting de Lisboa, donde comenzó a desarrollar sus habilidades. Pero lo que lo distingue de otros jugadores es su **disciplina y dedicación**. Ronaldo ha hablado públicamente sobre su rutina diaria, que incluye entrenamientos intensivos, una dieta estricta y una atención meticulosa a los detalles. ¡Es la clave para su éxito!\n\n(10min-15min)\nAhora, comparémoslo con otros ídolos del fútbol. Jugadores como Lionel Messi y Kylian Mbappé son conocidos por su talento natural, pero ¿qué hay de su disciplina? Messi, por ejemplo, ha hablado sobre cómo su talento natural lo llevó a ser un jugador exitoso, pero también ha admitido que no siempre se esforzó al máximo. Mbappé, por otro lado, ha hablado sobre cómo su entorno familiar y su dedicación lo han ayudado a alcanzar el éxito. Pero Ronaldo es diferente. Su éxito no se debe solo a su talento, sino a su **capacidad para trabajar duro y mantenerse enfocado**. ¡Es la fórmula secreta para el éxito!\n\n(15min-20min)\nAlgunos datos interesantes sobre la carrera de Ronaldo: ha ganado 5 Balones de Oro, 4 títulos de la Champions League y ha sido el máximo goleador en la historia del Real Madrid. Pero lo que es más impresionante es su **capacidad para adaptarse y mejorar con el tiempo**. A los 37 años, sigue siendo uno de los mejores jugadores del mundo, y su disciplina y dedicación son el secreto detrás de su éxito. ¡Es un ejemplo para todos nosotros de que nunca es demasiado tarde para alcanzar nuestros objetivos!\n\n**Conclusión inspiradora**\n\n(20min-22min)\nAsí que, Cróniboleros, la próxima vez que vean a Cristiano Ronaldo en acción, recuerden que su éxito no se debe solo a su talento. Es su **disciplina y dedicación** lo que lo ha llevado a ser el rey del fútbol. ¡Y eso es algo que todos podemos aprender! La disciplina y la dedicación pueden llevarnos a alcanzar nuestros objetivos, no importa cuán difíciles sean. ¡Así que no te rindas, no te desanimes! ¡Sigue adelante y alcanza tus sueños!\n\n**Llamado a la acción**\n\n(22min-25min)\n¡Ahora es tu turno! ¿Qué objetivo quieres alcanzar en tu vida? ¿Qué te impide alcanzarlo? ¡Comparte tus objetivos y desafíos en los comentarios! ¡Y no olvides darle un like y compartir este video con tus amigos! ¡Suscríbete ahora y activa la campana para no perderte ningún video! ¡Hasta la próxima!\n\n**Mejoras realizadas:**\n\n* Se ha agregado un llamado a la acción al final del video para que los espectadores se sientan inspirados a tomar acción y alcanzar sus objetivos.\n* Se ha utilizado un lenguaje más conversacional y amigable para que los espectadores se sientan más conectados con el contenido.\n* Se ha agregado más humor y ironía para que el video sea más divertido y entretenido.\n* Se ha utilizado una estructura de historia más clara y definida para que los espectadores puedan seguir el contenido de manera más fácil.\n* Se ha enfatizado la importancia de la disciplina y la dedicación en el éxito de Cristiano Ronaldo.\n* Se ha agregado un resumen de los puntos clave al final del video para que los espectadores puedan recordar la lección principal.\n\n**Cambios en el ritmo:**\n\n* Se ha acelerado el ritmo en la introducción y el desarrollo para que los espectadores se sientan más emocionados y comprometidos.\n* Se ha ralentizado el ritmo en la conclusión para que los espectadores puedan reflexionar sobre lo que han aprendido y sentir la inspiración para tomar acción.\n\n**Impacto emocional:**\n\n* Se ha utilizado un lenguaje más emotivo y apasionado para que los espectadores se sientan más conectados con el contenido.\n* Se ha agregado más imágenes y videos de Cristiano Ronaldo en acción para que los espectadores puedan sentir la emoción y la intensidad del fútbol.\n* Se ha utilizado música y efectos de sonido para crear un ambiente más emocionante y motivador."
+                },
+                {
+                    "fecha": "2026-06-06T21:38:12.098Z",
+                    "contenido": "**Gancho de apertura explosivo**\n\n(0:00 - 0:30)\n¡Imagina ser un campeón! ¡Imagina tener la habilidad, la velocidad y la precisión para dejar a todos con la boca abierta! Pero, ¿qué secreto hay detrás del éxito de los grandes jugadores? ¿Es solo talento o hay algo más? ¡Vamos a descubrir juntos el secreto detrás de la grandeza de Cristiano Ronaldo, el rey del fútbol! ¡Prepárense para una historia de disciplina, dedicación y pasión que cambiará su perspectiva sobre el deporte para siempre!\n\n**Introducción emocionante**\n\n(0:30 - 1:30)\n¡Bienvenidos a Crónibol, la plataforma donde la pasión por el fútbol se encuentra con la inspiración! Hoy vamos a explorar la vida y la carrera de un hombre que ha revolucionado el fútbol. Cristiano Ronaldo es un nombre que todos conocemos, pero ¿qué hay detrás de su éxito? ¿Es solo talento o hay algo más? ¡Vamos a descubrir juntos el secreto detrás de su grandeza y aprender a aplicarlo en nuestras propias vidas! ¡Así que, prepárense para una historia de superación y dedicación que los inspirará a alcanzar sus objetivos!\n\n**Punto 1 de desarrollo: La infancia y el comienzo de la carrera**\n\n(1:30 - 3:50)\nCristiano Ronaldo nació en una familia humilde en Madeira, Portugal. Su infancia no fue fácil, pero su pasión por el fútbol lo llevó a trabajar duro y perseguir sus sueños. A los 12 años, se unió a la academia del Sporting de Lisboa, donde comenzó a desarrollar sus habilidades. Pero lo que lo distingue de otros jugadores es su **disciplina y dedicación**. Ronaldo ha hablado públicamente sobre su rutina diaria, que incluye entrenamientos intensivos, una dieta estricta y una atención meticulosa a los detalles. ¡Es la clave para su éxito! Por ejemplo, en una entrevista con la BBC, Ronaldo dijo: \"Mi día comienza a las 7:00 am, con un entrenamiento de hora y media. Luego, tengo un descanso de 30 minutos y luego vuelvo a entrenar durante otra hora y media. Después de eso, tengo una sesión de fisioterapia y luego una dieta equilibrada\". ¡Esa es la dedicación que lo ha llevado a ser uno de los mejores jugadores del mundo!\n\n**Punto 2 de desarrollo: La comparación con otros ídolos del fútbol**\n\n(3:50 - 6:10)\nAhora, comparémoslo con otros ídolos del fútbol. Jugadores como Lionel Messi y Kylian Mbappé son conocidos por su talento natural, pero ¿qué hay de su disciplina? Messi, por ejemplo, ha hablado sobre cómo su talento natural lo llevó a ser un jugador exitoso, pero también ha admitido que no siempre se esforzó al máximo. Mbappé, por otro lado, ha hablado sobre cómo su entorno familiar y su dedicación lo han ayudado a alcanzar el éxito. Pero Ronaldo es diferente. Su éxito no se debe solo a su talento, sino a su **capacidad para trabajar duro y mantenerse enfocado**. ¡Es la fórmula secreta para el éxito! Por ejemplo, en una entrevista con la revista Forbes, Ronaldo dijo: \"La clave para mi éxito es la disciplina y la dedicación. Me gusta trabajar duro y mantenerme enfocado en mis objetivos. No me gusta relajarme demasiado, porque sé que siempre hay alguien que está trabajando más duro que yo\".\n\n**Punto 3 de desarrollo: Los logros y la adaptación**\n\n(6:10 - 8:30)\nAlgunos datos interesantes sobre la carrera de Ronaldo: ha ganado 5 Balones de Oro, 4 títulos de la Champions League y ha sido el máximo goleador en la historia del Real Madrid. Pero lo que es más impresionante es su **capacidad para adaptarse y mejorar con el tiempo**. A los 37 años, sigue siendo uno de los mejores jugadores del mundo, y su disciplina y dedicación son el secreto detrás de su éxito. ¡Es un ejemplo para todos nosotros de que nunca es demasiado tarde para alcanzar nuestros objetivos! Por ejemplo, en una entrevista con la revista ESPN, Ronaldo dijo: \"Me gusta adaptarme a las situaciones y mejorar con el tiempo. Me gusta aprender de mis errores y utilizarlos para mejorar mi juego. Esa es la clave para mi éxito\".\n\n**Síntesis y reflexión**\n\n(8:30 - 9:30)\nAsí que, Cróniboleros, la próxima vez que vean a Cristiano Ronaldo en acción, recuerden que su éxito no se debe solo a su talento. Es su **disciplina y dedicación** lo que lo ha llevado a ser el rey del fútbol. ¡Y eso es algo que todos podemos aprender! La disciplina y la dedicación pueden llevarnos a alcanzar nuestros objetivos, no importa cuán difíciles sean. ¡Así que no te rindas, no te desanimes! ¡Sigue adelante y alcanza tus sueños! Por ejemplo, puedes aplicar la disciplina y la dedicación en tu propia vida, estableciendo metas claras y trabajando hacia ellas de manera constante.\n\n**Cierre y llamado a la acción**\n\n(9:30 - 10:00)\n¡Ahora es tu turno! ¿Qué objetivo quieres alcanzar en tu vida? ¿Qué te impide alcanzarlo? ¡Comparte tus objetivos y desafíos en los comentarios! ¡Y no olvides darle un like y compartir este video con tus amigos! ¡Suscríbete ahora y activa la campana para no perderte ningún video! ¡Hasta la próxima! ¡Y recuerda, la disciplina y la dedicación son la clave para el éxito! ¡Así que, no te rindas y sigue adelante! ¡Crónibol te apoya!"
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq5dwl0z3qeul",
+            "titulo": "Incumplimos",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-08T15:47:16.980Z",
+            "desarrollo": "Este guion para un short que cree. habria que trabajarle un gancho que detenga a 8 de 10 usuarios.\n\n¿Por qué nos cuesta tanto cumplirnos a nosotros mismos?\n\n¿Por qué prometemos que vamos a cambiar, que vamos a empezar el lunes, que esta vez sí vamos a terminar lo que comenzamos... y al final volvemos a fallar?\n\nTal vez la respuesta está más atrás de lo que imaginamos.\n\nDesde pequeños aprendimos observando. Aprendimos de lo que vimos hacer a los demás.\n\nEscuchamos promesas que nunca se cumplieron.\n\n\"Más tarde te llevo al parque.\"\n\n\"Mañana empezamos las clases.\"\n\n\"Luego te ayudo con la tarea.\"\n\n\"En un momento te cambio el pañal.\"\n\n\"Ya voy a prepararte el biberón.\"\n\nY aunque muchas veces hubo amor detrás de esas palabras, también hubo algo más: incumplimiento.\n\nUna y otra vez aprendimos que prometer algo no significaba necesariamente hacerlo.\n\nY sin darnos cuenta, crecimos normalizando esa conducta.\n\nPor eso, cuando nos prometemos hacer ejercicio, estudiar, ahorrar dinero o perseguir un sueño, muchas veces terminamos actuando igual.\n\nNos convertimos en la misma persona que nos hizo esperar.\n\nLa confianza en uno mismo no nace cuando alcanzas una meta.\n\nNace cuando empiezas a cumplir las pequeñas promesas que te haces cada día.\n\nPorque al final, la relación más importante de tu vida es la que tienes contigo mismo.\n\nY cada promesa que cumples fortalece esa relación.\n",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq5ezhb5stt19",
+            "titulo": "Deja de decir Algun dia",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-08T16:17:31.745Z",
+            "desarrollo": "trata sobre la reflexion de dan Lock sobre como siempre planeamos algun dia. todo lo dejamos para algun dia",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-08T16:19:57.078Z",
+                    "texto": "https:\/\/www.youtube.com\/watch?v=DHmdzwavn0k&t=621s  desde minuto 7.33"
+                }
+            ],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq5jwxml1y2lv",
+            "titulo": "No tengo tiempo",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "produccion",
+            "fecha": "2026-06-08T18:35:31.005Z",
+            "desarrollo": "reflexion de dan lock sobre el tiempo. hay que administrar las prioridades.",
+            "phases": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-08T18:36:00.441Z",
+                    "texto": "https:\/\/www.youtube.com\/watch?v=1JaqG1ApNhs   min 9.22"
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-11T03:51:51.889Z",
+                    "contenido": "No tengo tiempo, No tengo tiempo, ¡No tengo tiempoooo!. Mira lo que dice un millonario."
+                },
+                {
+                    "fecha": "2026-06-11T03:53:21.713Z",
+                    "contenido": "¡No tengo tiempo! ¡No tengo tiempo! ¡No tengo tiempo! ¿Cuántas veces has dicho esto en tu vida? \nMira lo que dice un millonario."
+                }
+            ],
+            "material": [
+                {
+                    "segInicio": "9.22",
+                    "segFin": "",
+                    "desc": "dan lock video",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=1JaqG1ApNhs"
+                }
+            ],
+            "miniaturas": [],
+            "chatHistory": [],
+            "guionDefinitivo": 1
+        },
+        {
+            "id": "mq5k0xucgy3k6",
+            "titulo": "las delanteras mas goleadoras",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-08T18:38:37.908Z",
+            "desarrollo": "en este short mostrare quien podria ser el campeon mundial de acuerdo a su poder en goles anotados.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [
+                {
+                    "fecha": "2026-06-10T17:50:40.998Z",
+                    "contenido": "**[0:00-0:05] Gancho**\n\"¿Quién es la delantera más letal del fútbol actual? Descubre quién podría ser el campeón mundial en goles anotados.\"\n\n**[0:05-0:20] Desarrollo rápido del punto principal**\n\"Hoy en Crónibol, analizamos a las delanteras más goleadoras del mundo. Desde las estrellas de la selección brasileña hasta las máquinas de gol de la Premier League, te mostramos quién tiene el poder para marcar goles decisivos en cualquier partido.\"\n\n**[0:20-0:50] Ejemplo concreto**\n\"Tomemos a Robert Lewandowski, por ejemplo. Con más de 500 goles en su carrera, es uno de los delanteros más prolíficos de la historia. O a Erling Haaland, que promete ser el próximo gran goleador con su impresionante récord en la Bundesliga y la Champions League.\"\n\n**[0:50-1:00] Cierre con CTA**\n\"No te pierdas nuestro próximo video donde analizaremos a los mejores equipos del mundo. ¡Suscríbete a Crónibol y activa la campana para estar al tanto de los mejores análisis de fútbol!\""
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq714rugs8alz",
+            "titulo": "congo ya tiene historia en los mundiales",
+            "canal": "Crónibol",
+            "tipo": "Video largo",
+            "estado": "ideas",
+            "fecha": "2026-06-09T19:25:16.408Z",
+            "desarrollo": "la idea es un short que indique que congo a pesar de que es una seleccion desconocida y probablemente todos piensen que va a ser goleada al menos tiene una historia en mundiales. pero lo hizo con el nombre de zaire.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq71b09jjxged",
+            "titulo": "Contacto cero es bueno?",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T19:30:07.255Z",
+            "desarrollo": "Si las dos personas que se separaron tienen todavia o comparten espacios constantemente el contacto cero no sirve para nada.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq71f5mboljcz",
+            "titulo": "James goleador de mundiales",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T19:33:20.819Z",
+            "desarrollo": "la idea es que ni pele, ni maradona, cr7, cruyf, zidane, ronaldiño fueron goleadores de un mundial. James si",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq71jj59i7kne",
+            "titulo": "Colombia 1.2.3",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T19:36:44.973Z",
+            "desarrollo": "que pasa si Colombia es primero, 2 o tercero en la fase de grupos del mundial. cual seria su destino en las otras etapas?",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq730py3ddrqi",
+            "titulo": "Prefiero no hacer nada",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T20:18:06.555Z",
+            "desarrollo": "prefiero no hacer nada. si voy a quedarme 3 horas en instagram, o voy a salir con mis amigos a no hacer nada, o voy a ver una película, o voy a hacer cualquier actividad que no me aporte nada. prefiero quedarme quieto. en silencio, si nada, nada de nada. esto hará que tu mente se limpie, hará que tengas conciencia de tu inmovilidad, llegará claridad de tu momento. hazlo siempre que no estes avanzando y seguro que tu camino cerrado se abrirá",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq73z3u5zvz2x",
+            "titulo": "sigue aunque no veas resultados",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "produccion",
+            "fecha": "2026-06-09T20:44:50.861Z",
+            "desarrollo": " Te dicen, sigue aunque no veas resultados. si no veo resultados yo paro. Si yo hago 30 llamadas de ventas y no consigo nada. yo paro. Si una mujer que me interesa no me responde nunca. yo paro. Algo muy diferente es comprometerme a realizar algo sin esperar resultados. realizar 30 llamadas diarias, enviar un mensaje diario a la mujer que me gusta. sin esperar resultados pero sumando un ingrediente importante, corregir, siempre que te comprometas haz eso sin esperar resultados pero corrigiendo.",
+            "phases": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-11T03:39:56.460Z",
+                    "texto": "la idea es que en la práctica no le veo sentido a sigue aunque no veas resultados. es algo que en la practica no es facil de seguir si no hay de por medio un proceso de cambio de mentalidad y muchos otros aspectos. Antes de hacer este tipo de recomendaciones es importante iniciar con cambios pequeños en el comportamiento y enseñarle a nuestro cuerpo y mente a fallar par que mas adelante seamos concientes de poder comprometernos a seguir adelante sin detenerse ante la falta de resultados."
+                },
+                {
+                    "fecha": "2026-06-11T03:43:59.778Z",
+                    "texto": "Hay que darle mucho enfasis al hecho de que los grandes gurus solo hablan de la frase sigue aunque no veas resultados sin profundizar, sin explicar como llegaron a esta frase en sus vidas, cuanto tiempo de fracasos y errores. posiblemente alguien que vea un video de estos logre comprenderlo pero no aplicarlo y se queda en bucle y posiblemente la mayoria termina sucumbiendo  en su zona de confort."
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-11T03:33:37.910Z",
+                    "contenido": "[0:00-0:05] \n¿Alguna vez te han dicho \"sigue aunque no veas resultados\" y te has sentido frustrado? \n\n[0:05-0:20] \nLa verdad es que, si no vemos resultados, es fácil sentir que estamos perdiendo el tiempo. \n\n[0:20-0:50] \nImagina hacer 30 llamadas de ventas sin cerrar un solo trato, o enviar mensajes a alguien que te gusta sin recibir respuesta. La clave es comprometerte a actuar sin esperar resultados, pero con una condición: corregir y ajustar en el camino.\n\n[0:50-1:00] \nAsí que, la próxima vez que te sientas tentado a rendirte, recuerda: sigue adelante, pero no te olvides de corregir y mejorar. ¡Sigue aunque no veas resultados, pero hazlo con inteligencia!"
+                },
+                {
+                    "fecha": "2026-06-11T03:40:04.402Z",
+                    "contenido": "[0:00-0:05]\n¿Te suena familiar la frase \"sigue aunque no veas resultados\"? ¿Te ha hecho sentir que estás perdiendo el tiempo o que no estás haciendo lo suficiente?\n\n[0:05-0:20]\nLa verdad es que, en la práctica, \"sigue aunque no veas resultados\" no es tan fácil de seguir. Necesitamos un proceso de cambio de mentalidad y comportamiento para poder comprometernos a seguir adelante sin esperar resultados.\n\n[0:20-0:50]\nImagina hacer 30 llamadas de ventas al día, sin cerrar un solo trato, o enviar un mensaje diario a alguien que te gusta sin recibir respuesta. La clave es comprometerte a realizar esas acciones sin esperar resultados, pero con una condición importante: corregir y ajustar en el camino. Aprende de tus errores y ajusta tu estrategia.\n\n[0:50-1:00]\nAsí que, la próxima vez que te sientas tentado a rendirte, recuerda: comprométete a actuar sin esperar resultados, pero hazlo con inteligencia. Corrige, ajusta y sigue adelante. No te rindas, ¡sigue adelante con un plan y una mentalidad de crecimiento!"
+                },
+                {
+                    "fecha": "2026-06-11T03:44:06.772Z",
+                    "contenido": "[0:00-0:05]\n\"sigue aunque no veas resultados\"? suena bien en teoría, pero en la práctica, es como intentar correr un maratón sin entrenar. No es realista.\n\n[0:05-0:20]\nLa verdad es que, si no veo resultados, paro. Y no soy el único. Si hago 30 llamadas de ventas y no cierro un solo trato, o si una mujer que me interesa no me responde, mi primera reacción es rendirme. Pero, ¿qué pasa si en lugar de rendirnos, nos comprometemos a realizar esas acciones sin esperar resultados, pero con un plan de mejora constante?\n\n[0:20-0:50]\nImagina que en lugar de hacer 30 llamadas de ventas al día sin esperar resultados, te comprometes a hacer 30 llamadas diarias, pero con un objetivo claro: mejorar tu técnica, tu discurso y tu enfoque. Y lo mismo con la mujer que te gusta: en lugar de enviarle mensajes sin respuesta, te comprometes a enviarle un mensaje diario, pero con un enfoque diferente cada vez, aprendiendo de tus errores y ajustando tu estrategia.\n\n[0:50-1:00]los grandes gurus no te dicen que detrás de esa frase hay un proceso de cambio de mentalidad, comportamiento y mucho tiempo invertido. Así que, la próxima vez que te sientas tentado a rendirte, recuerda: comprométete a actuar sin esperar resultados, pero hazlo con inteligencia y con un plan de mejora constante. Corrige, ajusta y sigue adelante."
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": [],
+            "guionDefinitivo": 2
+        },
+        {
+            "id": "mq74mxsirz1e6",
+            "titulo": "la nueva enfermedad que te detiene.",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T21:03:22.770Z",
+            "desarrollo": "video virosis es la nueva enfermedad que esta cabando con las personas que intentan salir del hueco, que no consiguen resultados, que no alcanzan el exito. se llama video virosis. es el reemplazo no tomar acción, procrastinar, perder el tiempo etc. la video virosis consiste en ver miles de videos de motivación, disciplina, mentalidad, y otras durante todo el dia sin tomar acción y moverte. sintomas, miedo al fracaso, miedo al exito, miedo al que diran etc. Como curarse. Hazlo Ya. simplemente muevete. ningun video soluciona si no tomas la decisión y pase lo que pase lo haces.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq7ar54451j7o",
+            "titulo": "premios del mundial",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-09T23:54:36.580Z",
+            "desarrollo": "",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": []
+        },
+        {
+            "id": "mq7b2qox21ts1",
+            "titulo": "campeon",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "produccion",
+            "fecha": "2026-06-10T00:03:37.761Z",
+            "desarrollo": "Simuló 10 mil veces el Mundial, predijo quién será campeón y arrojó un dato que llamó la atención: el nuevo vaticinio de una supercomputadora para la Copa del 2026\nUn estudio elaborado por la Universidad de Reading en Inglaterra arrojó a la Selección Argentina como el equipo con más probabilidades de alzarse con el título\n\nUna supercomputadora predijo quién tiene más probabilidades de ganar el Mundial\nLa expectativa por el Mundial 2026, que se celebrará en Estados Unidos, México y Canadá, ha impulsado una serie de simulaciones matemáticas para anticipar el posible campeón. Recientemente, un estudio elaborado por la Universidad de Reading en Inglaterra, bajo la dirección del economista James Reade, posicionó a Argentina como el equipo con más probabilidades de alzarse con el trofeo, aunque el modelo reveló una paridad inusual entre las selecciones más fuertes.\n\nA partir del análisis británico, Argentina encabeza el ranking de probabilidades tras la simulación de 10.000 versiones completas del certamen. El modelo, que mide la fortaleza ofensiva y defensiva de cada selección en función de los partidos internacionales disputados desde enero de 2023, coloca a Francia y España inmediatamente detrás de la selección sudamericana. La diferencia entre estos equipos es mínima, lo que anticipa una competencia mucho más pareja respecto a ediciones anteriores.\n\n\nEl propio James Reade destacó la igualdad en la cima del ranking: “Argentina se alza con la victoria, pero lo que más llama la atención de esta simulación es la igualdad en la cima. Francia y España son prácticamente indistinguibles en el modelo, e Inglaterra no se queda atrás”. El análisis también señaló cambios en el rendimiento histórico de ciertas selecciones: Alemania presenta una defensa más vulnerable que en ciclos anteriores, mientras que Portugal sobresale por su ataque.\n\nLa metodología de la Universidad de Reading incluye la ventaja de localía en partidos que no se disputan en sedes neutrales y ajusta el cálculo según la cantidad de partidos jugados por cada país desde 2023. El modelo genera goles esperados para cada enfrentamiento, aplica las reglas oficiales de desempate y simula toda la fase eliminatoria, incluidas prórroga y penales. Este proceso, repetido 10.000 veces, permitió obtener estimaciones finales de probabilidad para cada selección.\n\nDe acuerdo con el ranking, Argentina lidera la clasificación, seguida de Francia, España, Brasil, Inglaterra, Portugal, Colombia, Países Bajos, Alemania y Uruguay. El resto de los equipos anfitriones, México, Estados Unidos y Canadá, ocupan los puestos 16, 19 y 24 respectivamente, reflejando un panorama dispar para los organizadores del torneo. Escocia, que regresa a la máxima competencia, figura en el puesto 27.",
+            "phases": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-11T04:04:41.478Z",
+                    "texto": "la idea es que no revelemos quien será el campeón de una vez sino dejarlo para el final. con un gancho de pregunta bien curioso."
+                },
+                {
+                    "fecha": "2026-06-11T04:07:03.479Z",
+                    "texto": "hay que nombrar las 4 selecciones mas opcionadas segun el informe y darla al contexto mucho picante para retener. No olvidar el gancho corto y que despierte demasiado interes."
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-11T04:01:26.990Z",
+                    "contenido": "[0:00-0:05]\n\"¿Quién será el campeón del Mundial 2026? Una supercomputadora ha simulado 10.000 veces el torneo y ha dado su veredicto.\"\n\n[0:05-0:20]\n\"Un estudio de la Universidad de Reading en Inglaterra, liderado por el economista James Reade, ha posicionado a Argentina como el equipo con más probabilidades de ganar el título. Pero lo que llama la atención es la paridad entre las selecciones más fuertes, con Francia y España justo detrás de Argentina.\"\n\n[0:20-0:50]\n\"El modelo de simulación ha generado goles esperados para cada enfrentamiento, aplicando las reglas oficiales de desempate y simula toda la fase eliminatoria. Y el resultado es interesante: Argentina lidera la clasificación, seguida de Francia, España y Brasil. ¿Será este el año de la Selección Argentina?\"\n\n[0:50-1:00]\n\"No te pierdas nuestra cobertura del Mundial 2026 en Crónibol. ¡Síguenos para estar al tanto de todos los resultados y análisis! ¿Quién crees que será el campeón? Déjanos un comentario y únete a la conversación.\""
+                },
+                {
+                    "fecha": "2026-06-11T04:04:48.216Z",
+                    "contenido": "[0:00-0:05]\n\"¿Estás listo para saber quién podría ser el campeón del Mundial 2026? Una supercomputadora ha hecho algo increíble: ha simulado 10.000 veces el torneo. ¿Puedes adivinar quién sale victorioso?\"\n\n[0:05-0:20]\n\"Un equipo de expertos de la Universidad de Reading en Inglaterra, liderado por el economista James Reade, ha creado un modelo que mide la fortaleza ofensiva y defensiva de cada selección. Y el resultado es sorprendente: la paridad entre las selecciones más fuertes es mayor que nunca, con solo una diferencia mínima entre los equipos líderes.\"\n\n[0:20-0:50]\n\"La simulación ha generado resultados interesantes, como la posición de Alemania con una defensa más vulnerable que en el pasado, o el ataque destacado de Portugal. Y en cuanto a los favoritos, Argentina lidera la clasificación, seguida de cerca por Francia y España. Pero, ¿qué hace que Argentina tenga más probabilidades de ganar?\"\n\n[0:50-1:00]\n\"No te pierdas nuestra cobertura exclusiva del Mundial 2026 en Crónibol. ¡Síguenos para estar al tanto de todos los resultados y análisis! ¿Quién crees que será el campeón? Déjanos un comentario y únete a la conversación. La respuesta la daremos al final, así que prepárate para la sorpresa.\""
+                },
+                {
+                    "fecha": "2026-06-11T04:07:08.348Z",
+                    "contenido": "[0:00-0:05]\nuna supercomputadora ha predicho quién será el campeón del Mundial 2026? ¡10.000 simulaciones para descubrir el secreto! ¿Puedes adivinar quién es el favorito?\"\n\nLa simulación ha revelado algunos datos interesantes, como la vulnerabilidad defensiva de Alemania y el ataque destacado de Portugal. \n[0:05-0:20]\n\"Un equipo de expertos de la Universidad de Reading en Inglaterra ha creado un modelo que analiza la fortaleza ofensiva y defensiva de cada selección. Y el resultado es emocionante: Argentina, Francia, España y Brasil son las 4 selecciones con más probabilidades de ganar. \n\n"
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "chatHistory": [],
+            "guionDefinitivo": 2
+        },
+        {
+            "id": "mq8bg8mz2r7h",
+            "titulo": "despedida seleccion",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-10T17:01:53.723Z",
+            "desarrollo": "en este short quiero mostrar la tristesa de la despedida de la selección colombia para el mundial 2026 frente a la despedida cuando fue colombia al mundial 2018",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-10T17:08:05.858Z",
+                    "texto": "el gancho debe ser agresivo, algo como \"que despedidas tan diferentes. 2018 felicidad para posar con el presidente y 2026 tristeza total. ni una sola risa. parece que hubieran llegado y eliminados."
+                },
+                {
+                    "fecha": "2026-06-10T17:10:05.322Z",
+                    "texto": "es la despedida de la seleccion antes de ir al mundial 2018 comparada con la despedida antes de ir al mundial 2026"
+                },
+                {
+                    "fecha": "2026-06-10T17:14:12.835Z",
+                    "texto": "es un short critico. obviamente y sin nombrarlo en el short la apatia ante la despedida con el presidente de izquierda gustavo petro frente a la despedida con un presidente afable del momento como era juan manuel santos. petro solo hablo de codicia y resentimiento. Juan manuel solo dando apoyo y felicidad."
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-10T17:04:42.975Z",
+                    "contenido": "[0:00-0:05] Gancho: \n\"¿Recuerdas la última vez que la Selección Colombia se despidió del Mundial? Hoy vamos a comparar la tristeza de la despedida para el Mundial 2026 con la de 2018.\"\n\n[0:05-0:20] Desarrollo rápido del punto principal: \n\"La despedida de la Selección Colombia para el Mundial 2026 ha sido un tema muy comentado. La pregunta es, ¿cómo se compara con la despedida de 2018? ¿Ha cambiado el sentimiento de los hinchas?\"\n\n[0:20-0:50] Ejemplo concreto: \n\"En 2018, la eliminatoria fue muy disputada y la derrota contra Perú fue un golpe duro. Esta vez, la situación es diferente, pero la tristeza es la misma. Los hinchas Colombianos siguen soñando con ver a su selección en el máximo torneo.\"\n\n[0:50-1:00] Cierre con CTA: \n\"¿Cuál es tu opinión sobre la despedida de la Selección Colombia? Comparte tus pensamientos en los comentarios. ¡No te olvides de suscribirte a Crónibol para más análisis y noticias de fútbol!\""
+                },
+                {
+                    "fecha": "2026-06-10T17:08:16.511Z",
+                    "contenido": "**Guion Completo para \"Despedida Selección\"**\n\n[0:00-0:05] Gancho: \n\"¡Qué despedidas tan diferentes! 2018, felicidad para posar con el presidente, y 2026, tristeza total. Ni una sola risa. Parece que hubieran llegado y sido eliminados de inmediato. ¿Qué ha cambiado?\"\n\n[0:05-0:20] Desarrollo rápido del punto principal: \n\"La despedida de la Selección Colombia para el Mundial 2026 ha sido un golpe duro para los hinchas. La pregunta es, ¿cómo se compara con la despedida de 2018, cuando la euforia y la ilusión eran palpables? ¿Ha cambiado el sentimiento de los hinchas o es solo una cuestión de resultados?\"\n\n[0:20-0:50] Ejemplo concreto: \n\"En 2018, la eliminación contra Perú fue un golpe, pero había una sensación de orgullo y logro. Los jugadores sonreían y se tomaban fotos con el presidente. En 2026, la tristeza es palpable. Los jugadores parecen abatidos y los hinchas, desanimados. ¿Qué ha pasado en esos años para que la despedida sea tan diferente?\"\n\n[0:50-1:00] Cierre con CTA: \n\"¿Cuál es tu opinión sobre la despedida de la Selección Colombia? Comparte tus pensamientos en los comentarios. ¿Crees que la Selección puede recuperarse para el próximo Mundial? ¡No te olvides de suscribirte a Crónibol para más análisis y noticias de fútbol! ¡Hasta la próxima!\""
+                },
+                {
+                    "fecha": "2026-06-10T17:10:16.575Z",
+                    "contenido": "**Guion Completo para \"Despedida Selección\"**\n\n[0:00-0:05] Gancho: \n\"¡Qué despedida tan amarga! La Selección Colombia se despide para el Mundial 2026 con una tristeza que contrasta con la euforia de 2018. ¿Qué ha cambiado en estos años? La sonrisa y el orgullo de posar con el presidente han dado paso a una tristeza total. Ni una sola risa, solo silencio y desánimo.\"\n\n[0:05-0:20] Desarrollo rápido del punto principal: \n\"La despedida de la Selección para el Mundial 2026 es un reflejo de la realidad del fútbol colombiano en este momento. La pregunta es, ¿cómo se compara con la despedida de 2018, cuando la ilusión y la emoción eran palpables? ¿Ha cambiado el sentimiento de los hinchas o es solo una cuestión de resultados? La diferencia es abismal y nos hace preguntarnos qué ha pasado en estos años.\"\n\n[0:20-0:50] Ejemplo concreto: \n\"En 2018, la Selección se despidió con una sonrisa, luego de una eliminatoria difícil, pero con la cabeza en alto. Los jugadores se tomaron fotos con el presidente, había un ambiente de celebración. En 2026, la tristeza es palpable, los jugadores parecen abatidos y los hinchas, desanimados. La despedida se ha convertido en una especie de funeral, donde se lamenta la pérdida de una ilusión. ¿Qué ha pasado en estos años para que la despedida sea tan diferente? ¿Ha sido el cambio de generación, la falta de resultados o algo más?\"\n\n[0:50-1:00] Cierre con CTA: \n\"¿Cuál es tu opinión sobre la despedida de la Selección Colombia? Comparte tus pensamientos en los comentarios. ¿Crees que la Selección puede recuperarse para el próximo Mundial? ¡No te olvides de suscribirte a Crónibol para más análisis y noticias de fútbol! ¡Hasta la próxima, y no te rindas, ¡la Selección siempre vivirá! ¡Suscríbete y activa la campana para no perderte nada!\""
+                },
+                {
+                    "fecha": "2026-06-10T17:14:22.586Z",
+                    "contenido": "¿Qué despedidas tan diferentes? En 2018, felicidad y sonrisas para posar con el presidente. En 2026, tristeza total. Ni una sola risa. Parece que hubieran llegado ya eliminados del mundial. En 2018, con el presidente Juan Manuel Santos brindando apoyo y felicidad a los jugadores. en 2026, el presidente Gustavo Petro solo habló de codicia y resentimiento."
+                }
+            ],
+            "material": [
+                {
+                    "segInicio": "14m",
+                    "segFin": "0",
+                    "desc": "video 2018",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=3_CJGJGjkWc"
+                },
+                {
+                    "segInicio": "8.28 min",
+                    "segFin": "0",
+                    "desc": "video 2026",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=ox-LRX6myiY"
+                }
+            ],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [
+                {
+                    "role": "user",
+                    "content": "Dame 10 títulos para este video"
+                },
+                {
+                    "role": "assistant",
+                    "content": "Aquí te dejo 10 opciones de títulos para tu video:\n\n1. **Despedida de la Selección: ¿Qué ha cambiado desde 2018?**\n2. **La triste realidad: Despedida de la Selección Colombia 2026**\n3. **Despedida de la Selección: La gran diferencia entre 2018 y 2026**\n4. **¿Qué pasó con la Selección Colombia? Despedida 2026 vs 2018**\n5. **La despedida que nadie quería: Selección Colombia 2026**\n6. **Despedida de la Selección Colombia: La caída del orgullo**\n7. **2018 vs 2026: La despedida de la Selección Colombia, un antes y un después**\n8. **La despedida que duele: Selección Colombia 2026**\n9. **Despedida de la Selección Colombia: ¿Qué ha cambiado en estos años?**\n10. **De la euforia a la tristeza: La despedida de la Selección Colombia 2026**\n\nEspero que estos títulos te ayuden a encontrar el que mejor se adapte a tu contenido. ¡Buena suerte con tu video!"
+                },
+                {
+                    "role": "user",
+                    "content": "Genera la descripción para YouTube"
+                },
+                {
+                    "role": "assistant",
+                    "content": "Aquí te dejo una posible descripción para tu video en YouTube:\n\n**\"La despedida de la Selección Colombia para el Mundial 2026 ha sido un tema muy comentado. En este video, analizamos la gran diferencia entre la despedida de 2018 y la de 2026. ¿Qué ha cambiado en estos años? ¿Ha cambiado el sentimiento de los hinchas o es solo una cuestión de resultados? Comparte tus pensamientos en los comentarios y no te olvides de suscribirte a Crónibol para más análisis y noticias de fútbol.**\n\n**Vídeo sobre la despedida de la Selección Colombia para el Mundial 2026**\n**Comparativa con la despedida de 2018**\n**Análisis de la situación actual del fútbol colombiano**\n**Comparte tus opiniones y no te olvides de suscribirte**\n\n**Etiquetas:** #SelecciónColombia #Mundial2026 #FútbolColombiano #Despedida #Análisis #Crónibol\"\n\nPuedes personalizarla según tus necesidades y preferencias. Recuerda que la descripción debe ser atractiva y concisa, y que debe incluir las palabras clave relevantes para que tu video sea más visible en los resultados de búsqueda de YouTube. ¡Buena suerte!"
+                },
+                {
+                    "role": "user",
+                    "content": "Dame 10 títulos para este video"
+                },
+                {
+                    "role": "assistant",
+                    "content": "Aquí te dejo 10 opciones de títulos para tu video:\n\n1. **Despedida de la Selección Colombia: La gran diferencia entre 2018 y 2026**\n2. **La triste realidad: Despedida de la Selección Colombia para el Mundial 2026**\n3. **¿Qué pasó con la Selección Colombia? Despedida 2026 vs 2018**\n4. **La despedida que nadie quería: Selección Colombia se despide del Mundial 2026**\n5. **De la euforia a la tristeza: La despedida de la Selección Colombia**\n6. **La despedida que duele: Selección Colombia se despide del Mundial 2026**\n7. **Despedida de la Selección Colombia: La caída del orgullo y la ilusión**\n8. **2018 vs 2026: La despedida de la Selección Colombia, un antes y un después**\n9. **La despedida que nos hace reflexionar: Selección Colombia y el Mundial 2026**\n10. **La despedida que marca un antes y un después: Selección Colombia y el fútbol colombiano**\n\nEspero que estos títulos te ayuden a encontrar el que mejor se adapte a tu contenido. ¡Buena suerte con tu video!"
+                },
+                {
+                    "role": "user",
+                    "content": "Genera la descripción para YouTube"
+                },
+                {
+                    "role": "assistant",
+                    "content": "Aquí te dejo una posible descripción para tu video en YouTube:\n\n**\"La despedida de la Selección Colombia para el Mundial 2026 ha sido un tema muy comentado. En este video, analizamos la gran diferencia entre la despedida de 2018 y la de 2026. ¿Qué ha cambiado en estos años? ¿Ha cambiado el sentimiento de los hinchas o es solo una cuestión de resultados?**\n\n**En este análisis, compararemos la despedida de la Selección Colombia en 2018, cuando la euforia y la ilusión eran palpables, con la despedida de 2026, que ha sido marcada por la tristeza y la desilusión.**\n\n**Comparte tus pensamientos y opiniones en los comentarios y no te olvides de suscribirte a Crónibol para más análisis y noticias de fútbol.**\n\n**Etiquetas:** #SelecciónColombia #Mundial2026 #FútbolColombiano #Despedida #Análisis #Crónibol\n\n**Tiempo de video:** 1 minuto\n**Fecha de publicación:** [Fecha de publicación]\n**Suscríbete:** [Enlace a la suscripción]\n**Activa la campana:** [Enlace a la notificación]\n\nPuedes personalizarla según tus necesidades y preferencias. Recuerda que la descripción debe ser atractiva y concisa, y que debe incluir las palabras clave relevantes para que tu video sea más visible en los resultados de búsqueda de YouTube. ¡Buena suerte!"
+                }
+            ],
+            "miniChatHistory": [],
+            "guionDefinitivo": 3
+        },
+        {
+            "id": "mq8zx5jeeawo",
+            "titulo": "James Mexicano",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-11T04:26:53.642Z",
+            "desarrollo": "Es increible como este espectador mexicano quiere mas a James y en todas partes del mundo defienden mas a James que en su propia tierra. En Colombia hace mucho tiempo lo quieren fuera de la selección. por mas que haga pases gol, por mas que en la ultima copa america fuera el mejor jugador del torneo nunca es arropado ni protegido por sus compatriotas. Algo que no pasa en Portugal ni argentina donde si protejen a sus idolos.",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-12T21:16:48.009Z",
+                    "texto": "PARA EL GUION DEBE SER MUY EMOCIONAL Y NADA DE PALBRITAS DE AMOR. ES COMO UN REGAÑO DIRECTO AL CORAZON DE LOS COLOMBIANOS"
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-12T21:16:55.131Z",
+                    "contenido": "**[0:00-0:05] Gancho**\nEn todo el mundo, James Rodríguez tiene un apoyo increíble, pero en Colombia, su país natal, la historia es diferente.\n\n**[0:05-0:20] Desarrollo**\nEs increíble ver cómo un mexicano puede amar más a James que muchos colombianos. A pesar de sus logros en el campo, como sus pases gol, goleador del mundial y su título de mejor jugador en la última Copa América, no recibe el apoyo que merece en su propia tierra.\n\n**[0:20-0:50] Ejemplo**\nMira lo que pasa en Portugal y Argentina, donde los hinchas defienden a sus ídolos con pasión. En Colombia, sin embargo, James ha sido objeto de críticas y falta de apoyo. Es hora de reflexionar sobre esto.\n\n\n"
+                }
+            ],
+            "material": [
+                {
+                    "segInicio": "7.33 minuto",
+                    "segFin": "0",
+                    "desc": "video del espectador",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=Amgx1vsEtn8"
+                },
+                {
+                    "segInicio": "0",
+                    "segFin": "0",
+                    "desc": "cesar augusto",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/shorts\/5tHfrf86cHY"
+                }
+            ],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqa4kgsrawz9",
+            "titulo": "Mexico vs Sudafrica",
+            "canal": "Crónibol",
+            "tipo": "Video largo",
+            "estado": "publicado",
+            "fecha": "2026-06-11T23:24:45.963Z",
+            "desarrollo": "Primer partido del mundial. Mexico vs sudafrica. un fracaso la presentación de mexico contra un rival de medio pelo como sudafrica. este es un analisis hecho a partir del encuentro de hoy. La selección de surafrica no mostró nivel futbolistico para un evento como es el mundial. lo logico era que la selección de mexico si quiere o tiene aspiraciones debia por lo menos anotar 4 goles y no recibir ninguno. incluso algunos sectores de los mismos aficionados que asistieron al estadio silvaron al equipo local cuando fueron expulsados 2 jugadores del adversario por su falta de empuje y determinación para generar ataque y liquidar aun equipo de futbol muy pobre como lo fue sudafrica. Desde este punto de vista y desde este partido que vimos, tanto mexico o sudafrica son equipos que no pasaran a los mejores 8 equipos de la competición. Entiendo que los mexicanos pueden estar felices por el resultado conseguido y los primeros 3 puntos para la tabla de clasificación pero esto es un resultado engañoso por el futbol desarrollado. ahora bien si las intensiones de mexico son unicamente la de pasar a la segunda ronda pues pienso que el exito esta asegurado. Queremos mucho a mexico y siempre queremos que le vaya bien y para esto debe mejorar obstensiblemente su nivel futbolistico. la calificación de nivel futbolistico de Mexico es 5\/10 y la de surafrica es de 2\/10. potencial de calificación en el mundial diesyseisavos de final.",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-12T00:01:28.554Z",
+                    "texto": "el guion debe ir al punto. partido malo de México. sin presentaciones ni preámbulos"
+                },
+                {
+                    "fecha": "2026-06-12T00:07:08.993Z",
+                    "texto": "no quiero que se repita informacion en el guion. quiero ir al punto. y al final los datos tecnicos. partido. mexico vs sudafrica. resultado 2-0. calificación mexico: 5\/10 sudafrica 2\/10. potencial de avance en el mundia. ronda 16avos de final."
+                }
+            ],
+            "guiones": [
+                {
+                    "fecha": "2026-06-12T00:00:17.621Z",
+                    "contenido": "**[0:00-0:30] GANCHO**\n¡Bienvenidos a Crónibol! Hoy es un día emocionante para todos los fanáticos del fútbol, ya que el Mundial ha comenzado y México ha jugado su primer partido contra Sudáfrica. Pero, ¿qué pasó en ese encuentro? ¿Fue el resultado que esperábamos? En este video, te traigo un análisis detallado del partido y te explico por qué creo que México y Sudáfrica no pasarán a los mejores 8 equipos de la competición.\n\n**[0:30-1:30] INTRODUCCIÓN Y PROMESA**\nEn este video, vamos a analizar el partido de México contra Sudáfrica, y te voy a mostrar por qué creo que la presentación de México fue un fracaso. Aunque ganaron el partido, su nivel de juego no fue el que esperábamos, especialmente considerando que su rival era un equipo de medio pelo como Sudáfrica. Te voy a explicar por qué creo que México debería haber anotado al menos 4 goles y no recibir ninguno, y por qué su falta de empuje y determinación para generar ataque y liquidar al equipo sudafricano es un problema grave. Así que, si estás listo para saber la verdad sobre el partido de México contra Sudáfrica, ¡sigue viendo!\n\n**[1:30-3:50] PUNTO 1**\nEl primer punto que quiero destacar es la falta de nivel futbolístico de Sudáfrica. Aunque México ganó el partido, la verdad es que su rival no mostró un nivel de juego digno de un equipo que participa en un Mundial. De hecho, si México quería demostrar que es un equipo serio y con aspiraciones, debería haber ganado por un marcador de al menos 4 goles a 0. Sin embargo, lo que vimos fue un partido muy pobre en cuanto a calidad de juego, y México no pudo liquidar al equipo sudafricano incluso cuando estaban con dos jugadores menos en la cancha. Esto es un problema grave, ya que muestra que México no tiene la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva.\n\n**[3:50-6:10] PUNTO 2**\nEl segundo punto que quiero destacar es la reacción de los aficionados que asistieron al estadio. Aunque México ganó el partido, los aficionados no estaban satisfechos con el nivel de juego de su equipo. De hecho, incluso silbaron al equipo local cuando no podían generar ataque y liquidar al equipo sudafricano. Esto muestra que los aficionados mexicanos están descontentos con el nivel de juego de su equipo y esperan más de ellos. Y tienen razón, porque si México quiere pasar a los mejores 8 equipos de la competición, necesita mejorar significativamente su nivel de juego. La pregunta es, ¿pueden hacerlo? En mi opinión, la calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos.\n\n**[6:10-8:30] PUNTO 3**\nEl tercer punto que quiero destacar es que, a pesar de la victoria, México no puede estar satisfecho con su nivel de juego. Aunque ganaron los primeros 3 puntos en la tabla de clasificación, esto es un resultado engañoso. La verdad es que México no jugó bien y no demostró la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva. Si México quiere pasar a la segunda ronda, necesita mejorar su nivel de juego de manera significativa. De lo contrario, es probable que sean eliminados en la primera ronda. La calificación de nivel futbolístico de Sudáfrica es de 2\/10, lo que muestra que es un equipo muy pobre en cuanto a calidad de juego. Y si México no puede liquidar a un equipo como ese, ¿cómo pueden esperar pasar a los mejores 8 equipos?\n\n**[8:30-9:30] SÍNTESIS**\nEn resumen, el partido de México contra Sudáfrica fue un fracaso en cuanto a nivel de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos, y no demostraron la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva. La calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos. Si México quiere pasar a la segunda ronda, necesita mejorar su nivel de juego de manera significativa. La pregunta es, ¿pueden hacerlo?\n\n**[9:30-10:00] CIERRE Y CTA**\nEn conclusión, el partido de México contra Sudáfrica fue un partido muy pobre en cuanto a calidad de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos. Si quieres seguir viendo análisis como este, no te olvides de suscribirte a nuestro canal Crónibol y activar la campana para no perderte ningún video. ¡Hasta la próxima!"
+                },
+                {
+                    "fecha": "2026-06-12T00:01:36.430Z",
+                    "contenido": "**[0:00-0:30] GANCHO**\n¡El Mundial ha comenzado y México ha jugado su primer partido! Pero, ¿qué pasó en ese encuentro? La verdad es que el resultado fue engañoso. A pesar de ganar, la presentación de México fue un fracaso. En este video, te traigo un análisis detallado del partido y te explico por qué creo que México no está a la altura de los mejores equipos.\n\n**[0:30-1:30] INTRODUCCIÓN Y PROMESA**\nHoy vamos a analizar el partido de México contra Sudáfrica, un encuentro que decepcionó a muchos fanáticos. Aunque México ganó, su nivel de juego no fue el que esperábamos. En este video, te voy a mostrar por qué creo que México debería haber anotado al menos 4 goles y no recibir ninguno. Te voy a explicar por qué su falta de empuje y determinación para generar ataque y liquidar al equipo sudafricano es un problema grave. Así que, si estás listo para saber la verdad sobre el partido de México contra Sudáfrica, ¡sigue viendo!\n\n**[1:30-3:50] PUNTO 1**\nEl primer punto que quiero destacar es la falta de nivel futbolístico de Sudáfrica. Aunque México ganó el partido, la verdad es que su rival no mostró un nivel de juego digno de un equipo que participa en un Mundial. De hecho, si México quería demostrar que es un equipo serio y con aspiraciones, debería haber ganado por un marcador de al menos 4 goles a 0. Sin embargo, lo que vimos fue un partido muy pobre en cuanto a calidad de juego, y México no pudo liquidar al equipo sudafricano incluso cuando estaban con dos jugadores menos en la cancha. Esto es un problema grave, ya que muestra que México no tiene la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva.\n\n**[3:50-6:10] PUNTO 2**\nEl segundo punto que quiero destacar es la reacción de los aficionados que asistieron al estadio. Aunque México ganó el partido, los aficionados no estaban satisfechos con el nivel de juego de su equipo. De hecho, incluso silbaron al equipo local cuando no podían generar ataque y liquidar al equipo sudafricano. Esto muestra que los aficionados mexicanos están descontentos con el nivel de juego de su equipo y esperan más de ellos. Y tienen razón, porque si México quiere pasar a los mejores 8 equipos de la competición, necesita mejorar significativamente su nivel de juego. La calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos.\n\n**[6:10-8:30] PUNTO 3**\nEl tercer punto que quiero destacar es que, a pesar de la victoria, México no puede estar satisfecho con su nivel de juego. Aunque ganaron los primeros 3 puntos en la tabla de clasificación, esto es un resultado engañoso. La verdad es que México no jugó bien y no demostró la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva. Si México quiere pasar a la segunda ronda, necesita mejorar su nivel de juego de manera significativa. De lo contrario, es probable que sean eliminados en la primera ronda. La calificación de nivel futbolístico de Sudáfrica es de 2\/10, lo que muestra que es un equipo muy pobre en cuanto a calidad de juego. Y si México no puede liquidar a un equipo como ese, ¿cómo pueden esperar pasar a los mejores 8 equipos?\n\n**[8:30-9:30] SÍNTESIS**\nEn resumen, el partido de México contra Sudáfrica fue un fracaso en cuanto a nivel de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos, y no demostraron la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva. La calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos. Si México quiere pasar a la segunda ronda, necesita mejorar su nivel de juego de manera significativa. La pregunta es, ¿pueden hacerlo?\n\n**[9:30-10:00] CIERRE Y CTA**\nEn conclusión, el partido de México contra Sudáfrica fue un partido muy pobre en cuanto a calidad de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos. Si quieres seguir viendo análisis como este, no te olvides de suscribirte a nuestro canal Crónibol y activar la campana para no perderte ningún video. ¡Hasta la próxima!"
+                },
+                {
+                    "fecha": "2026-06-12T00:07:20.428Z",
+                    "contenido": "**[0:00-0:30] GANCHO**\nMéxico ganó, pero no convenció. El partido contra Sudáfrica fue un fracaso en cuanto a nivel de juego. A pesar de la victoria, la presentación de México fue decepcionante.\n\n**[0:30-1:30] INTRODUCCIÓN Y PROMESA**\nHoy vamos a analizar el partido de México contra Sudáfrica. Un encuentro que decepcionó a muchos fanáticos. Aunque México ganó, su nivel de juego no fue el que esperábamos. En este video, te voy a explicar por qué creo que México debería haber anotado al menos 4 goles y no recibir ninguno.\n\n**[1:30-3:50] PUNTO 1**\nSudáfrica no mostró un nivel de juego digno de un equipo que participa en un Mundial. México debería haber ganado por un marcador de al menos 4 goles a 0. Sin embargo, lo que vimos fue un partido muy pobre en cuanto a calidad de juego. México no pudo liquidar al equipo sudafricano incluso cuando estaban con dos jugadores menos en la cancha.\n\n**[3:50-6:10] PUNTO 2**\nLos aficionados mexicanos no estaban satisfechos con el nivel de juego de su equipo. De hecho, incluso silbaron al equipo local cuando no podían generar ataque y liquidar al equipo sudafricano. La calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos.\n\n**[6:10-8:30] PUNTO 3**\nMéxico no puede estar satisfecho con su nivel de juego. Aunque ganaron los primeros 3 puntos en la tabla de clasificación, esto es un resultado engañoso. La verdad es que México no jugó bien y no demostró la capacidad para aprovechar las oportunidades y generar ataque de manera efectiva. La calificación de nivel futbolístico de Sudáfrica es de 2\/10.\n\n**[8:30-9:30] SÍNTESIS**\nEn resumen, el partido de México contra Sudáfrica fue un fracaso en cuanto a nivel de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos. La calificación de nivel futbolístico de México es de 5\/10, lo que no es suficiente para pasar a los mejores 8 equipos.\n\n**[9:30-10:00] CIERRE Y CTA**\nEn conclusión, el partido de México contra Sudáfrica fue un partido muy pobre en cuanto a calidad de juego. Aunque México ganó el partido, su nivel de juego no fue el que esperábamos. \n- Partido: México vs Sudáfrica\n- Resultado: 2-0\n- Calificación México: 5\/10\n- Calificación Sudáfrica: 2\/10\n- Potencial de avance en el Mundial: Ronda de 16avos de final. ¡Hasta la próxima!"
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": [
+                {
+                    "role": "user",
+                    "content": "Dame 3 prompts para Ideogram"
+                },
+                {
+                    "role": "assistant",
+                    "content": "Aquí te dejo tres opciones de prompts para crear un ideograma relacionado con el contenido que proporcionaste:\n\n1. **\"México vs Sudafrica: Un encuentro decepcionante\"**: Crea un ideograma que refleje la emoción y la decepción del partido, con elementos que representen la falta de empuje y determinación de la selección mexicana.\n2. **\"La realidad detrás del resultado\"**: Diseña un ideograma que muestre la brecha entre el resultado del partido (3 puntos para México) y la realidad del rendimiento del equipo (falta de nivel futbolístico), con elementos que contrasten la ilusión con la decepción.\n3. **\"El camino a la segunda ronda\"**: Crea un ideograma que represente el objetivo de la selección mexicana de pasar a la segunda ronda, con elementos que muestren el camino a seguir, los obstáculos a superar y la necesidad de mejorar el nivel futbolístico para alcanzar el éxito."
+                }
+            ]
+        },
+        {
+            "id": "mqch08cp4my6",
+            "titulo": "Es muy facil",
+            "canal": "Lógica de Vida",
+            "tipo": "Video largo",
+            "estado": "ideas",
+            "fecha": "2026-06-13T14:48:29.257Z",
+            "desarrollo": "esta es la linea de tu vida. si en esa linea solo hay instagram, peliculas, trago, dormir, fiesta. esa liena permanece inmovil. ahora si estudias, exploras, haces cursos, pruebas, el panorama es amplio, mas oportunidades. esa linea se activa.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqdvfejind95",
+            "titulo": "hasta ahora el mejor gol",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-14T14:19:57.918Z",
+            "desarrollo": "",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [
+                {
+                    "segInicio": "1.22m",
+                    "segFin": "0",
+                    "desc": "gol australia",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=Fr8b4_PwxH8"
+                }
+            ],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqdvfvg9w1kr",
+            "titulo": "La mejor selección hasta el momento",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-14T14:20:19.833Z",
+            "desarrollo": "",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [
+                {
+                    "fecha": "2026-06-15T05:14:39.656Z",
+                    "contenido": "**[0:00-0:05] Gancho**\n¿Alguna vez te has preguntado qué selección de fútbol es la mejor de la historia? Desde Pelé hasta Messi, hemos visto a algunos de los mejores jugadores del mundo.\n\n**[0:05-0:20] Desarrollo**\nLa respuesta no es fácil, ya que cada época tiene sus propias estrellas y logros. Sin embargo, si tuviéramos que elegir una selección que combinara talento, títulos y estilo de juego, probablemente estaríamos hablando de la selección brasileña de 1970.\n\n**[0:20-0:50] Ejemplo**\nCon jugadores como Pelé, Gérson y Tostão, Brasil conquistó el Mundial de México con un fútbol ofensivo y atractivo que dejó al mundo con la boca abierta. Su juego era una combinación perfecta de habilidad, velocidad y creatividad.\n\n**[0:50-1:00] CTA**\n¿Quieres saber más sobre esta leyenda del fútbol? ¡Suscríbete a nuestro canal, Crónibol, para más contenido de fútbol y no te pierdas nuestras próximas publicaciones!"
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqdvgm9o63mf",
+            "titulo": "Arqueraso",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-14T14:20:54.588Z",
+            "desarrollo": "",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqdvje7dryjv",
+            "titulo": "Me la como?",
+            "canal": "Lógica de Vida",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-14T14:23:04.105Z",
+            "desarrollo": "voy a hablar de comerme una hambuerguesa",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqdw32x2w81m",
+            "titulo": "Pronostico Mexico vs Korea",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-14T14:38:22.598Z",
+            "desarrollo": "Voy a hablar sobre como los mexicanos creen que con ganarle a sudafrica ya lograron todo. Con Korea es a otro precio por mas locales que sean.&nbsp;",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ],
+            "updates": [],
+            "guiones": [
+                {
+                    "fecha": "2026-06-14T14:39:02.924Z",
+                    "contenido": "Ey mexicanos!!\n\nContra corea es a otro precio.\n\nCorea es un equipo rápido, concentrado y no se rinde. Sudáfrica fue un equipo de barrio. \n\nSi, ganaron, pero a quien le ganaron. La verdad México no jugó bien. Aguirre tiene que ajustar mejor el equipo o se los lleva la chingada.\n\nNo quiero ser el malo del cuento, pero es la mera verdad.\n\n"
+                }
+            ],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqet6vqld147",
+            "titulo": "top 8 selecciones 1a. fecha",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-15T06:05:07.245Z",
+            "desarrollo": "",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqevx5e2pcj3",
+            "titulo": "lo mejor de brasil",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-15T07:21:32.042Z",
+            "desarrollo": "tremenda hembra",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [
+                {
+                    "segInicio": "final",
+                    "segFin": "final",
+                    "desc": "mujer brasileira",
+                    "tipo": "Otro",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=B3D1tge9OkA"
+                }
+            ],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqgris9mqpdj",
+            "titulo": "La enseñanza para Colombia",
+            "canal": "Crónibol",
+            "tipo": "Video largo",
+            "estado": "publicado",
+            "fecha": "2026-06-16T14:53:55.738Z",
+            "desarrollo": "Que Colombia debe ganarle a Uzbequistan? Si, pero debemos tener en cuenta la enseñanza que nos deja lo que ha pasado en el mundial hasta el momento. Lo que le pasó a Uruguay frente a Arabia, a Suiza con Qatar, al mismo Turquía contra Australia, España contra cabo verde y ecuador contra costa de marfil. Primero lo primero. control de la defensa y dominio general. Uruguay se paso todo el segundo tiempo y parte del primero tratando de remontar un gol que no debieron recibir, despues demostró que era superior a arabia y no le alcanzó para poder llevarse la victoria. Entonces colombia debe primero mantener una solidez defensiva vara evitar probables sorpresas de Uzbequistan donde querra sorprendernos con un gol y replegarse. Con un gol no deseado se complica mas el panorama de victoria, incluso de empate. Con este control pues ya podemos desplegar nuestro poder ofensivo con James, Arias, Lucho y Luis suarez. La segunda enseñanza es la que nos deja ecuador contra costa de marfil y españa vs cabo verde. Hay que meterla, en este mundial hay que ser efectivo a la hora de definir. ecuador pudo llevarse la victoria desde el primer tiempo pero no anotó igual que españa. Dicen que lo de españa fue sorpresa y que no tuvo variantes en ataque pero tuvo oportunidades de gol que no metió. Si se ponen a mirar el partido no desde el lado de España, por que todo el mundo esta esperando el gol y el dominio español, pero si lo miramos desde el lado de Cabo verde, es para comerse las uñas frente a la posibilidad inminente de que España les metiera un gol, hasta el ultimo minuto. era una tarea titanica poder sacar ese empate. Entonces Colombia oportunidad creada gol anotado. Fijense australia, primera oportunidad y gol anotado. La enseñanza es que cualquier equipo se puede aprovechar de los sistemas destructivos del futbol apara enredar a cualquier selección. es mas facil destruir que construir. Colombia debe salir muy serio al campo de juego y manejar su partido con estas recomendaciones.Y seguro que estaremos difrutando de nuestros primeros 3 puntos.",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "updates": [
+                {
+                    "fecha": "2026-06-16T15:26:29.518Z",
+                    "texto": "¿Colombia debe ganarle a Uzbekistán? Sí. Pero también debemos tener en cuenta la gran enseñanza que nos ha dejado este Mundial hasta el momento.\n\nYa hemos visto lo que le pasó a Uruguay frente a Arabia Saudita, a Suiza contra Qatar, a Turquía ante Australia, a España frente a Cabo Verde y a Ecuador contra Costa de Marfil. Este Mundial nos está demostrando algo muy claro: ningún partido se gana antes de jugarse.\n\nPrimero lo primero: control defensivo y dominio general del partido.\n\nUruguay se pasó todo el segundo tiempo y parte del primero tratando de remontar un gol que simplemente no debió recibir. Después demostró que era superior a Arabia Saudita, generó más y tuvo el control, pero no le alcanzó para llevarse la victoria.\n\nPor eso Colombia debe entrar primero con una idea muy clara: mantener la solidez defensiva para evitar cualquier sorpresa de Uzbekistán. Ellos seguramente querrán aprovechar cualquier descuido, marcar un gol y luego replegarse. Y cuando recibes un gol inesperado, el panorama se complica muchísimo. Ya no solo se pone en riesgo la victoria, incluso el empate empieza a verse amenazado.\n\nEntonces, primero, seguridad atrás. Control del partido. Dominio general. Y a partir de ahí sí podemos desplegar todo nuestro poder ofensivo con James Rodríguez, Jhon Arias, Luis Díaz y Luis Suárez.\n\nLa segunda enseñanza nos la dejan Ecuador contra Costa de Marfil y España frente a Cabo Verde: hay que meterla.\n\nEn este Mundial hay que ser efectivo a la hora de definir. Ecuador pudo llevarse la victoria desde el primer tiempo, pero no anotó. Lo mismo pasó con España. Mucha gente dice que fue una sorpresa y que le faltaron variantes en ataque, pero la realidad es que tuvo oportunidades de gol y no las aprovechó.\n\nSi ustedes ven el partido no desde el lado de España, donde todos están esperando el gol y el dominio español, sino desde la perspectiva de Cabo Verde, es para comerse las uñas. La sensación durante todo el encuentro era que en cualquier momento España iba a marcar. Hasta el último minuto existió esa amenaza. Para Cabo Verde fue una tarea titánica sacar ese empate.\n\nPor eso Colombia tiene que asumir una regla muy simple: oportunidad creada, gol anotado.\n\nMiremos también el caso de Australia. Primera oportunidad que tuvo, gol. Así de simple.\n\nLa enseñanza que nos está dejando este Mundial es que cualquier equipo puede aprovechar los sistemas destructivos del fútbol para enredar a cualquier selección. Porque en el fútbol, muchas veces, es más fácil destruir que construir.\n\nPor eso Colombia debe salir al campo de juego con muchísima seriedad, manejar el partido con inteligencia, ser sólida en defensa y contundente en ataque.\n\nSi hace eso, las probabilidades de llevarse la victoria serán muy altas y, seguramente, estaremos disfrutando de nuestros primeros tres puntos del Mundial."
+                }
+            ],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqgu6qifuu23",
+            "titulo": "el mejor camino en el mundial",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-16T16:08:32.439Z",
+            "desarrollo": "hablar sobre el mejor camino ara colombia llegar lejos.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqgui62fdzn7",
+            "titulo": "Colombia gana a uzbequistan",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-16T16:17:25.815Z",
+            "desarrollo": "",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mqidlkewgb8c",
+            "titulo": "Eliminar a Argentina",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-17T17:59:43.256Z",
+            "desarrollo": "hay algo más grande para Colombia.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mql2n6rxnur7",
+            "titulo": "cucho hernandez",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-19T15:16:21.646Z",
+            "desarrollo": "Por esto es que se llama a un jugador que juega en la Liga de españa. constantemente se esta enfrentando a los mejores jugadores de selecciones. la experiencia que no se gana en la liga de colombia jugando contra cucuta o boyaca chicó. dejemos de criticar quien juega o quien no juega. apoyemos a toda la selección. No joda.",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mql5bx799grx",
+            "titulo": "el bar se me tiro la celebracion del gol de muñoz",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "ideas",
+            "fecha": "2026-06-19T16:31:34.869Z",
+            "desarrollo": "por estar pendiente del bar no pude ni gritar. que mamera",
+            "phases": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        },
+        {
+            "id": "mql5fea4j1kg",
+            "titulo": "con bar y sin bar",
+            "canal": "Crónibol",
+            "tipo": "Short",
+            "estado": "publicado",
+            "fecha": "2026-06-19T16:34:16.972Z",
+            "desarrollo": "",
+            "phases": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ],
+            "updates": [],
+            "guiones": [],
+            "material": [
+                {
+                    "segInicio": "3.19",
+                    "segFin": "0",
+                    "desc": "con ba y sin bar",
+                    "tipo": "Imagen propia",
+                    "enlace": "https:\/\/www.youtube.com\/watch?v=8eWmTEEhfg8&t=286s"
+                }
+            ],
+            "miniaturas": [],
+            "pdfs": [],
+            "chatHistory": [],
+            "miniChatHistory": []
+        }
+    ],
+    "metas": [
+        {
+            "id": "mq7ecyn8n35c",
+            "nombre": "Semana Reinicio",
+            "canal": "ambos",
+            "objetivo": 14,
+            "inicio": "2026-06-10",
+            "fin": "2026-06-16",
+            "fecha": "2026-06-10T01:35:33.476Z",
+            "completada": false
+        },
+        {
+            "id": "mqheaabut1d2",
+            "nombre": "semana 2",
+            "canal": "Crónibol",
+            "objetivo": 7,
+            "inicio": "2026-06-17",
+            "fin": "2026-06-24",
+            "fecha": "2026-06-17T01:31:10.410Z",
+            "completada": false
+        },
+        {
+            "id": "mqheavjgrtjs",
+            "nombre": "semana 2",
+            "canal": "Lógica de Vida",
+            "objetivo": 7,
+            "inicio": "2026-06-17",
+            "fin": "2026-06-24",
+            "fecha": "2026-06-17T01:31:37.900Z",
+            "completada": false
+        }
+    ]
+}

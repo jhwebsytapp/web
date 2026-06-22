@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YT Production Studio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+:root{--bg:#0f0f13;--bg2:#1a1a22;--bg3:#22222e;--border:#2e2e3e;--accent:#7c6aff;--accent2:#ff6a6a;--green:#4ade80;--yellow:#fbbf24;--text:#e8e8f0;--text2:#9090a8;--cronibol:#3b82f6;--logica:#a855f7;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.4)}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+.app{display:flex;min-height:100vh}
+.sidebar{width:220px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;height:100vh;z-index:100;transition:left .3s}
+.main{margin-left:220px;flex:1;padding:28px;overflow-x:hidden;max-width:calc(100vw - 220px)}
+.sidebar-logo{padding:20px 16px;border-bottom:1px solid var(--border)}
+.sidebar-logo h1{font-size:15px;font-weight:700;color:var(--accent)}
+.sidebar-logo p{font-size:11px;color:var(--text2);margin-top:2px}
+.sidebar-nav{padding:12px 8px;flex:1;overflow-y:auto}
+.nav-section{margin-bottom:20px}
+.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text2);padding:0 8px;margin-bottom:6px}
+.nav-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--text2);transition:all .15s;margin-bottom:2px}
+.nav-item:hover{background:var(--bg3);color:var(--text)}
+.nav-item.active{background:var(--accent);color:#fff}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-c{background:var(--cronibol)}.dot-l{background:var(--logica)}
+.sidebar-bottom{padding:12px 8px;border-top:1px solid var(--border)}
+.api-status{font-size:11px;color:var(--text2);padding:8px 10px;display:flex;align-items:center;gap:6px}
+.api-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+.menu-btn{display:none;position:fixed;top:12px;left:12px;z-index:300;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:18px;line-height:1}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99}
+.overlay.show{display:block}
+.screen{display:none}.screen.active{display:block}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.page-title{font-size:22px;font-weight:700}
+.page-title span{font-size:13px;font-weight:400;color:var(--text2);margin-left:10px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-size:13px;font-weight:500;transition:all .15s;flex-shrink:0}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:#6b5ae8}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{background:var(--border)}
+.btn-danger{background:rgba(255,100,100,.15);color:var(--accent2);border:1px solid rgba(255,100,100,.2)}
+.btn-green{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.2)}
+.btn-sm{padding:5px 10px;font-size:12px}
+.btn-c{background:var(--cronibol);color:#fff}.btn-l{background:var(--logica);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.stat-card .lbl{font-size:12px;color:var(--text2);margin-bottom:8px}
+.stat-card .val{font-size:28px;font-weight:700}
+.stat-card .sub{font-size:11px;color:var(--text2);margin-top:4px}
+.stat-c{border-top:3px solid var(--cronibol)}.stat-l{border-top:3px solid var(--logica)}
+.stat-a{border-top:3px solid var(--accent)}.stat-g{border-top:3px solid var(--green)}.stat-y{border-top:3px solid var(--yellow)}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dash-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.dash-card h3{font-size:13px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.dash-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.dash-item:last-child{border-bottom:none}.dash-item:hover{opacity:.8}
+.dash-item-title{font-size:13px;font-weight:500;margin-bottom:3px}
+.dash-item-sub{font-size:11px;color:var(--text2)}
+.cpill{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;flex-shrink:0}
+.cpill-c{background:rgba(59,130,246,.2);color:var(--cronibol)}.cpill-l{background:rgba(168,85,247,.2);color:var(--logica)}
+.pbar{background:var(--bg3);border-radius:20px;overflow:hidden}
+.pbar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),#a78bfa);transition:width .4s}
+.canal-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.cs-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center}
+.cs-num{font-size:24px;font-weight:700}.cs-lbl{font-size:11px;color:var(--text2);margin-top:4px}
+.kanban{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.k-col{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.k-col-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.k-col-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.k-count{background:var(--bg3);color:var(--text2);font-size:11px;padding:2px 7px;border-radius:20px}
+.k-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;cursor:pointer;transition:all .15s}
+.k-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.k-card-title{font-size:13px;font-weight:500;margin-bottom:8px;line-height:1.4}
+.k-card-meta{display:flex;align-items:center;justify-content:space-between}
+.k-date{font-size:10px;color:var(--text2)}
+.tbadge{font-size:10px;padding:2px 6px;border-radius:4px}
+.t-short{background:rgba(251,191,36,.15);color:var(--yellow)}.t-largo{background:rgba(124,106,255,.15);color:var(--accent)}
+.k-add{width:100%;background:transparent;border:1px dashed var(--border);border-radius:8px;padding:10px;color:var(--text2);font-size:12px;cursor:pointer;transition:all .15s}
+.k-add:hover{border-color:var(--accent);color:var(--accent)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;width:100%;max-width:540px;max-height:90vh;overflow-y:auto}
+.modal-hdr{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between}
+.modal-title{font-size:17px;font-weight:700}
+.modal-x{background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer}
+.modal-body{padding:20px 24px 24px}
+.fg{margin-bottom:16px}
+.fl{font-size:12px;color:var(--text2);margin-bottom:6px;display:block;font-weight:500}
+.fi,.fs,.ft{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:13px;font-family:inherit;transition:border-color .15s}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--accent)}
+.fs option{background:var(--bg3)}
+.ft{resize:vertical;min-height:80px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.faction{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--text2);font-size:13px;cursor:pointer;margin-bottom:20px;padding:6px 10px;border-radius:6px;transition:all .15s}
+.back-btn:hover{background:var(--bg2);color:var(--text)}
+.proj-hdr{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:20px}
+.proj-title{font-size:22px;font-weight:700;margin-bottom:8px}
+.proj-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.mchip{font-size:11px;padding:3px 10px;border-radius:20px;background:var(--bg3);color:var(--text2)}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:20px;overflow-x:auto}
+.tab{padding:10px 14px;font-size:13px;cursor:pointer;color:var(--text2);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.tab:hover{color:var(--text)}.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab-content{display:none}.tab-content.active{display:block}
+.checklist{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.cl-item{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.cl-item:last-child{border-bottom:none}.cl-item:hover{background:var(--bg3)}
+.cl-item.done{opacity:.6}
+.cl-box{width:20px;height:20px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;transition:all .2s}
+.cl-item.done .cl-box{background:var(--green);border-color:var(--green);color:#000}
+.cl-num{font-size:11px;font-weight:700;color:var(--text2);width:24px;flex-shrink:0}
+.cl-label{font-size:13px;font-weight:500}
+.cl-item.done .cl-label{text-decoration:line-through;color:var(--text2)}
+.editor-area{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)}
+.editor-content{padding:16px;min-height:200px;outline:none;font-size:14px;line-height:1.7}
+.editor-content:empty:before{content:attr(data-placeholder);color:var(--text2)}
+.g-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+.g-hdr{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg3);border-bottom:1px solid var(--border);cursor:pointer;flex-wrap:wrap;gap:8px}
+.g-version{font-size:13px;font-weight:700;color:var(--accent)}
+.g-date{font-size:11px;color:var(--text2)}
+.g-def{font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(74,222,128,.15);color:var(--green);font-weight:700;border:1px solid rgba(74,222,128,.3)}
+.g-body{padding:16px}
+.g-text{font-size:13px;line-height:1.8;white-space:pre-wrap;color:var(--text);max-height:280px;overflow-y:auto;word-break:break-word}
+.g-text.expanded{max-height:none}
+.g-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.mat-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.mat-time{font-size:11px;font-weight:700;color:var(--accent);white-space:nowrap;min-width:80px}
+.mat-type{font-size:10px;padding:2px 8px;border-radius:20px;background:var(--bg3);color:var(--text2)}
+.min-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:10px}
+.chat-wrap{border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;overflow:hidden;background:var(--bg2);width:100%}
+.chat-msgs{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px;display:flex;flex-direction:column;gap:12px}
+.chat-msg{padding:12px 14px;border-radius:10px;font-size:13px;line-height:1.6;word-break:break-word;overflow-wrap:anywhere;max-width:85%}
+.chat-msg.user{background:var(--accent);color:#fff;align-self:flex-end;border-radius:10px 10px 2px 10px}
+.chat-msg.ai{background:var(--bg3);color:var(--text);align-self:flex-start;border-radius:10px 10px 10px 2px;white-space:pre-wrap}
+.chat-msg.loading{color:var(--text2);font-style:italic}
+.chat-foot{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:var(--bg3)}
+.chat-input{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:13px;font-family:inherit;resize:none}
+.chat-input:focus{outline:none;border-color:var(--accent)}
+.chip{display:inline-block;font-size:11px;padding:5px 10px;border-radius:20px;background:var(--bg3);color:var(--text2);cursor:pointer;border:1px solid var(--border);transition:all .15s;margin-right:6px;white-space:nowrap}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.upd-entry{background:var(--bg3);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:10px}
+.upd-date{font-size:11px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.upd-text{font-size:13px;line-height:1.6;white-space:pre-wrap}
+.pdf-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--bg3);border-radius:8px;margin-bottom:8px;flex-wrap:wrap;gap:8px}
+.meta-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.search-bar{position:relative;margin-bottom:24px}
+.search-bar input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:11px 16px 11px 42px;color:var(--text);font-size:14px}
+.search-bar input:focus{outline:none;border-color:var(--accent)}
+.s-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text2)}
+.set-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px}
+.set-card h3{font-size:15px;font-weight:600;margin-bottom:14px}
+.st-ideas{color:var(--yellow)}.st-desarrollo{color:var(--accent)}.st-produccion{color:var(--cronibol)}.st-publicado{color:var(--green)}
+.empty{text-align:center;padding:40px 20px;color:var(--text2)}
+.empty .ico{font-size:36px;margin-bottom:10px}
+@media(max-width:1100px){.kanban{grid-template-columns:1fr 1fr}.canal-summary{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.dash-grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sidebar{width:200px}.main{margin-left:200px;max-width:calc(100vw - 200px);padding:16px}.kanban{grid-template-columns:1fr}.page-title{font-size:18px}}
+@media(max-width:520px){.sidebar{position:fixed;left:-240px}.sidebar.open{left:0}.main{margin-left:0;max-width:100vw;padding:12px}.menu-btn{display:flex}.overlay.show{display:block}.kanban{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.canal-summary{grid-template-columns:1fr 1fr}.chat-msg{max-width:95%}}
+::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><h1>🎬 YT Studio</h1><p>Production Manager</p></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-label">General</div>
+      <div class="nav-item active" onclick="goNav('dashboard')"><span>📊</span>Dashboard</div>
+      <div class="nav-item" onclick="goNav('search')"><span>🔍</span>Buscador</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">Canales</div>
+      <div class="nav-item" onclick="goNav('canal-c')"><span class="dot dot-c"></span>Crónibol</div>
+      <div class="nav-item" onclick="goNav('canal-l')"><span class="dot dot-l"></span>Lógica de Vida</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">Sistema</div>
+      <div class="nav-item" onclick="goNav('metas')"><span>🎯</span>Metas</div>
+      <div class="nav-item" onclick="goNav('settings')"><span>⚙️</span>Configuración</div>
+    </div>
+  </nav>
+  <div class="sidebar-bottom"><div class="api-status"><div class="api-dot"></div><span>Gemini activo</span></div></div>
+</aside>
+<main class="main">
+<div class="screen active" id="screen-dashboard">
+  <div class="page-header">
+    <div class="page-title">Dashboard <span>Resumen general</span></div>
+    <button class="btn btn-primary" onclick="openNewModal()">+ Nueva idea</button>
+  </div>
+  <div class="stats-grid" id="statsGrid"></div>
+  <div class="dash-grid">
+    <div class="dash-card"><h3>🎯 Metas Activas</h3><div id="dMetas"></div></div>
+    <div class="dash-card"><h3>🎬 En Producción</h3><div id="dProd"></div></div>
+    <div class="dash-card"><h3>💡 Ideas Recientes</h3><div id="dIdeas"></div></div>
+    <div class="dash-card"><h3>✏️ En Desarrollo</h3><div id="dDes"></div></div>
+  </div>
+</div>
+<div class="screen" id="screen-canal-c">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <div style="width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,.2);display:flex;align-items:center;justify-content:center;font-size:18px">⚽</div>
+    <div><div class="page-title" style="color:var(--cronibol)">Crónibol</div><div style="font-size:13px;color:var(--text2)">Canal de fútbol</div></div>
+    <button class="btn btn-c" style="margin-left:auto" onclick="openNewModal('Crónibol')">+ Nueva idea</button>
+  </div>
+  <div class="canal-summary" id="sum-c"></div>
+  <div class="kanban" id="kanban-c"></div>
+</div>
+<div class="screen" id="screen-canal-l">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+    <div style="width:40px;height:40px;border-radius:10px;background:rgba(168,85,247,.2);display:flex;align-items:center;justify-content:center;font-size:18px">🧠</div>
+    <div><div class="page-title" style="color:var(--logica)">Lógica de Vida</div><div style="font-size:13px;color:var(--text2)">Desarrollo personal</div></div>
+    <button class="btn btn-l" style="margin-left:auto" onclick="openNewModal('Lógica de Vida')">+ Nueva idea</button>
+  </div>
+  <div class="canal-summary" id="sum-l"></div>
+  <div class="kanban" id="kanban-l"></div>
+</div>
+<div class="screen" id="screen-search">
+  <div class="page-header"><div class="page-title">Buscador</div></div>
+  <div class="search-bar"><span class="s-icon">🔍</span><input type="text" id="sInput" placeholder="Buscar proyectos..." oninput="doSearch()"></div>
+  <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+    <select class="fs" style="width:auto" id="fCanal" onchange="doSearch()"><option value="">Todos los canales</option><option>Crónibol</option><option>Lógica de Vida</option></select>
+    <select class="fs" style="width:auto" id="fEstado" onchange="doSearch()"><option value="">Todos los estados</option><option value="ideas">Ideas</option><option value="desarrollo">En desarrollo</option><option value="produccion">En producción</option><option value="publicado">Publicado</option></select>
+    <select class="fs" style="width:auto" id="fTipo" onchange="doSearch()"><option value="">Todos los tipos</option><option>Short</option><option>Video largo</option></select>
+  </div>
+  <div id="sResults"></div>
+</div>
+<div class="screen" id="screen-metas">
+  <div class="page-header">
+    <div class="page-title">Metas <span>Videos publicados</span></div>
+    <button class="btn btn-primary" onclick="showMetaModal()">+ Nueva meta</button>
+  </div>
+  <div id="metasContent"></div>
+</div>
+<div class="screen" id="screen-settings">
+  <div class="page-header"><div class="page-title">Configuración</div></div>
+  <div class="set-card">
+    <h3>🤖 Motor de IA</h3>
+    <p style="font-size:13px;color:var(--text2)">Este sistema usa <strong style="color:var(--accent)">Google Gemini</strong> a través de <code style="background:var(--bg3);padding:2px 6px;border-radius:4px">api.php</code> en tu servidor.</p>
+  </div>
+  <div class="set-card">
+    <h3>💾 Datos</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:14px">Exporta o importa todos tus proyectos.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-secondary" onclick="exportData()">📤 Exportar</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('impFile').click()">📥 Importar</button>
+      <input type="file" id="impFile" accept=".json" style="display:none" onchange="importData(event)">
+    </div>
+  </div>
+</div>
+<div class="screen" id="screen-project"><div id="projContainer"></div></div>
+</main>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="mNuevo">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">💡 Nueva Idea</div><button class="modal-x" onclick="closeModal('mNuevo')">×</button></div>
+    <div class="modal-body">
+      <div class="frow">
+        <div class="fg"><label class="fl">Título *</label><input type="text" class="fi" id="nTit" placeholder="Título provisional..."></div>
+        <div class="fg"><label class="fl">Canal *</label><select class="fs" id="nCan"><option>Crónibol</option><option>Lógica de Vida</option></select></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Tipo</label><select class="fs" id="nTipo"><option>Video largo</option><option>Short</option></select></div>
+        <div class="fg"><label class="fl">Estado inicial</label><select class="fs" id="nEst"><option value="ideas">💡 Ideas</option><option value="desarrollo">✏️ En desarrollo</option></select></div>
+      </div>
+      <div class="fg"><label class="fl">Desarrollo inicial</label><textarea class="ft" id="nDes" rows="4" placeholder="Escribe todo lo que tienes en mente..."></textarea></div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mNuevo')">Cancelar</button><button class="btn btn-primary" onclick="createProject()">Crear idea</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mUpdate">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">📝 Nueva actualización</div><button class="modal-x" onclick="closeModal('mUpdate')">×</button></div>
+    <div class="modal-body">
+      <div class="fg"><label class="fl">Observaciones</label><textarea class="ft" id="updText" rows="5" placeholder="Nuevas ideas u observaciones..."></textarea></div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mUpdate')">Cancelar</button><button class="btn btn-primary" onclick="saveUpdate()">Guardar</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mMaterial">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">🎞 Agregar material</div><button class="modal-x" onclick="closeModal('mMaterial')">×</button></div>
+    <div class="modal-body">
+      <div class="frow">
+        <div class="fg"><label class="fl">Segundo inicio</label><input type="text" class="fi" id="mSI" placeholder="ej: 0"></div>
+        <div class="fg"><label class="fl">Segundo fin</label><input type="text" class="fi" id="mSF" placeholder="ej: 5"></div>
+      </div>
+      <div class="fg"><label class="fl">Descripción *</label><textarea class="ft" id="mDesc" rows="3" placeholder="¿Qué recurso visual va aquí?"></textarea></div>
+      <div class="fg"><label class="fl">Tipo</label>
+        <select class="fs" id="mTipo"><option>Imagen propia</option><option>Imagen Canva</option><option>Imagen Stock</option><option>Video Stock</option><option>Captura de pantalla</option><option>Texto en pantalla</option><option>Música</option><option>Sonido</option><option>Efecto visual</option><option>Otro</option></select>
+      </div>
+      <div class="fg"><label class="fl">Enlace de referencia (opcional)</label><input type="text" class="fi" id="mEnlace" placeholder="https://..."></div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mMaterial')">Cancelar</button><button class="btn btn-primary" onclick="saveMaterial()">Agregar</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mMiniatura">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">🖼 Idea de miniatura</div><button class="modal-x" onclick="closeModal('mMiniatura')">×</button></div>
+    <div class="modal-body">
+      <div class="fg"><label class="fl">Concepto / Descripción *</label><textarea class="ft" id="minDesc" rows="3" placeholder="Describe la miniatura..."></textarea></div>
+      <div class="fg"><label class="fl">Texto en miniatura</label><input type="text" class="fi" id="minTxt" placeholder="ej: EL SECRETO QUE NADIE TE DICE"></div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Variante</label><input type="text" class="fi" id="minVar" placeholder="ej: Versión A"></div>
+        <div class="fg"><label class="fl">Enlace referencia</label><input type="text" class="fi" id="minEnl" placeholder="https://..."></div>
+      </div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mMiniatura')">Cancelar</button><button class="btn btn-primary" onclick="saveMiniatura()">Guardar</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="mMeta">
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">🎯 Nueva Meta</div><button class="modal-x" onclick="closeModal('mMeta')">×</button></div>
+    <div class="modal-body">
+      <div class="frow">
+        <div class="fg"><label class="fl">Nombre de la meta *</label><input type="text" class="fi" id="metaN" placeholder="ej: 10 videos en Q1"></div>
+        <div class="fg"><label class="fl">Canal</label><select class="fs" id="metaCan"><option value="ambos">🌐 Ambos canales</option><option value="Crónibol">⚽ Crónibol</option><option value="Lógica de Vida">🧠 Lógica de Vida</option></select></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Objetivo (videos) *</label><input type="number" class="fi" id="metaObj" min="1" placeholder="10"></div>
+        <div class="fg"><label class="fl">Fecha inicio</label><input type="date" class="fi" id="metaIni"></div>
+        <div class="fg"><label class="fl">Fecha límite *</label><input type="date" class="fi" id="metaFin"></div>
+      </div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mMeta')">Cancelar</button><button class="btn btn-primary" onclick="crearMeta()">Crear meta</button></div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" style="max-width:900px">
+    <div class="modal-hdr"><div class="modal-title">✏️ Editar Guion</div><button class="modal-x" onclick="closeModal('mEditGuion')">×</button></div>
+    <div class="modal-body">
+      <div class="fg"><textarea class="ft" id="editGuionTa" style="min-height:60vh;font-family:inherit;font-size:14px;line-height:1.6"></textarea></div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mEditGuion')">Cancelar</button><button class="btn btn-primary" onclick="saveEditGuion()">Guardar</button></div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal">
+    <div class="modal-hdr"><div class="modal-title">🎯 Nueva Meta</div><button class="modal-x" onclick="closeModal('mMeta')">×</button></div>
+    <div class="modal-body">
+      <div class="fg"><label class="fl">Nombre de la meta *</label><input type="text" class="fi" id="metaN" placeholder="ej: Sprint de junio..."></div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Canal</label>
+          <select class="fs" id="metaCan"><option value="ambos">🌐 Ambos canales</option><option value="Crónibol">⚽ Crónibol</option><option value="Lógica de Vida">🧠 Lógica de Vida</option></select>
+        </div>
+        <div class="fg"><label class="fl">Videos a publicar *</label><input type="number" class="fi" id="metaObj" min="1" placeholder="ej: 8"></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Fecha inicio</label><input type="date" class="fi" id="metaIni"></div>
+        <div class="fg"><label class="fl">Fecha límite *</label><input type="date" class="fi" id="metaFin"></div>
+      </div>
+      <div class="faction"><button class="btn btn-secondary" onclick="closeModal('mMeta')">Cancelar</button><button class="btn btn-primary" onclick="crearMeta()">Crear meta</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PHASES=['Idea','Guion definitivo','Grabación de voz','Preparación de audio en Sony Vegas','Búsqueda de material multimedia','Edición final en Sony Vegas','Renderizado','Títulos y descripciones','Programación en YouTube','Publicado','Miniatura'];
+const COLS=[{key:'ideas',label:'💡 Ideas',color:'var(--yellow)'},{key:'desarrollo',label:'✏️ En desarrollo',color:'var(--accent)'},{key:'produccion',label:'🎬 En producción',color:'var(--cronibol)'},{key:'publicado',label:'✅ Publicado',color:'var(--green)'}];
+const SL={ideas:'💡 Idea',desarrollo:'✏️ Desarrollo',produccion:'🎬 Producción',publicado:'✅ Publicado'};
+
+// DATA — localStorage + save.php silencioso
+function getData(){try{return JSON.parse(localStorage.getItem('ytStudio')||'{"projects":[]}')}catch{return{projects:[]}}}
+function saveData(d){
+  localStorage.setItem('ytStudio',JSON.stringify(d));
+  fetch('save.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).catch(function(){});
+}
+
+const gid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const fd=iso=>new Date(iso).toLocaleDateString('es-CO',{day:'2-digit',month:'short',year:'numeric'});
+const now=()=>new Date().toISOString();
+const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const projPhaseIdx=p=>p.tipo==='Video largo'?PHASES.map((_,i)=>i):PHASES.map((_,i)=>i).filter(i=>PHASES[i]!=='Miniatura');
+const pct=p=>{const idx=projPhaseIdx(p);return p.phases?Math.round(idx.filter(i=>p.phases[i]).length/idx.length*100):0;};
+
+function autoEstado(ph){
+  if(!ph)return'ideas';
+  const done=ph.map((v,i)=>v?i:-1).filter(i=>i>=0);
+  if(!done.length)return'ideas';
+  if(ph[9])return'publicado';
+  const mx=Math.max(...done);
+  if(mx>=1)return'produccion';
+  if(mx===0)return'desarrollo';
+  return'ideas';
+}
+
+let curScreen='dashboard',curProject=null,prevScreen=null;
+
+function goNav(screen){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  const el=document.getElementById('screen-'+screen);
+  if(!el)return;
+  el.classList.add('active');
+  const items=document.querySelectorAll('.nav-item');
+  const map={dashboard:0,search:1,'canal-c':3,'canal-l':4,metas:6,settings:7};
+  if(map[screen]!==undefined)items[map[screen]]?.classList.add('active');
+  curScreen=screen;
+  if(screen==='dashboard')renderDash();
+  if(screen==='canal-c')renderKanban('Crónibol');
+  if(screen==='canal-l')renderKanban('Lógica de Vida');
+  if(screen==='search')doSearch();
+  if(screen==='metas')renderMetas();
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+
+function openProj(id){
+  prevScreen=curScreen;curProject=id;
+  const p=getData().projects.find(x=>x.id===id);
+  if(!p)return;
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  goNav('project');
+}
+function goBack(){goNav(prevScreen||'dashboard');}
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+
+function renderDash(){
+  const d=getData(),ps=d.projects||[];
+  const cr=ps.filter(p=>p.canal==='Crónibol'),lo=ps.filter(p=>p.canal==='Lógica de Vida');
+  const prod=ps.filter(p=>p.estado==='produccion');
+  const ideas=ps.filter(p=>p.estado==='ideas');
+  const pub=ps.filter(p=>p.estado==='publicado');
+  const des=ps.filter(p=>p.estado==='desarrollo');
+  document.getElementById('statsGrid').innerHTML=`
+    <div class="stat-card stat-c"><div class="lbl">⚽ Crónibol</div><div class="val">${cr.filter(p=>p.estado!=='publicado').length}</div><div class="sub">${cr.filter(p=>p.estado==='produccion').length} en prod · ${cr.filter(p=>p.estado==='publicado').length} pub</div></div>
+    <div class="stat-card stat-l"><div class="lbl">🧠 Lógica de Vida</div><div class="val">${lo.filter(p=>p.estado!=='publicado').length}</div><div class="sub">${lo.filter(p=>p.estado==='produccion').length} en prod · ${lo.filter(p=>p.estado==='publicado').length} pub</div></div>
+    <div class="stat-card stat-a"><div class="lbl">🎬 En Producción</div><div class="val">${prod.length}</div><div class="sub">proyectos activos</div></div>
+    <div class="stat-card stat-g"><div class="lbl">✅ Publicados</div><div class="val">${pub.length}</div><div class="sub">videos en YouTube</div></div>
+  `;
+  const rl=(items,empty)=>items.length===0
+    ?`<div style="color:var(--text2);font-size:13px;padding:12px 0">${empty}</div>`
+    :items.map(p=>`<div class="dash-item" onclick="openProj('${p.id}')"><div><div class="dash-item-title">${esc(p.titulo)}</div><div class="dash-item-sub">${fd(p.fecha)} · ${pct(p)}%</div></div><span class="cpill ${p.canal==='Crónibol'?'cpill-c':'cpill-l'}">${p.canal==='Crónibol'?'⚽':'🧠'}</span></div>`).join('');
+  const rl5=(items,empty)=>items.length===0
+    ?`<div style="color:var(--text2);font-size:13px;padding:12px 0">${empty}</div>`
+    :items.slice(0,5).map(p=>`<div class="dash-item" onclick="openProj('${p.id}')"><div><div class="dash-item-title">${esc(p.titulo)}</div><div class="dash-item-sub">${fd(p.fecha)} · ${pct(p)}%</div></div><span class="cpill ${p.canal==='Crónibol'?'cpill-c':'cpill-l'}">${p.canal==='Crónibol'?'⚽':'🧠'}</span></div>`).join('');
+  document.getElementById('dProd').innerHTML=rl(prod,'Sin proyectos en producción');
+  document.getElementById('dIdeas').innerHTML=rl5(ideas.slice().reverse(),'Sin ideas registradas');  document.getElementById('dDes').innerHTML=rl(des,'Sin proyectos en desarrollo');
+  renderMetasDash();
+}
+
+function renderKanban(canal){
+  const id=canal==='Crónibol'?'c':'l';
+  const d=getData(),ps=d.projects.filter(p=>p.canal===canal);
+  document.getElementById('sum-'+id).innerHTML=COLS.map(c=>{
+    const n=ps.filter(p=>p.estado===c.key).length;
+    return`<div class="cs-card"><div class="cs-num" style="color:${c.color}">${n}</div><div class="cs-lbl">${c.label}</div></div>`;
+  }).join('');
+  document.getElementById('kanban-'+id).innerHTML=COLS.map(col=>{
+    const items=ps.filter(p=>p.estado===col.key);
+    return`<div class="k-col"><div class="k-col-hdr"><span class="k-col-title" style="color:${col.color}">${col.label}</span><span class="k-count">${items.length}</span></div>${items.map(p=>`<div class="k-card" onclick="openProj('${p.id}')"><div class="k-card-title">${esc(p.titulo)}</div><div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:3px"><span>Progreso</span><span>${pct(p)}%</span></div><div class="pbar" style="height:5px"><div class="pbar-fill" style="width:${pct(p)}%"></div></div></div><div class="k-card-meta"><span class="k-date">${fd(p.fecha)}</span><span class="tbadge ${p.tipo==='Short'?'t-short':'t-largo'}">${p.tipo}</span></div></div>`).join('')}<button class="k-add" onclick="openNewModal('${canal}','${col.key}')">+ Agregar</button></div>`;
+  }).join('');
+}
+
+function buildProj(p){
+  const cc=p.canal==='Crónibol'?'var(--cronibol)':'var(--logica)';
+  const ce=p.canal==='Crónibol'?'⚽':'🧠';
+  const pc=pct(p);
+  const phaseIdx=projPhaseIdx(p);
+  const phases=phaseIdx.map((i,n)=>{const ph=PHASES[i];const done=p.phases&&p.phases[i];return`<div class="cl-item ${done?'done':''}" onclick="togglePhase('${p.id}',${i})"><span class="cl-num">${n+1}</span><div class="cl-box">${done?'✓':''}</div><span class="cl-label">${ph}</span>${done?'<span style="margin-left:auto;font-size:11px;color:var(--green)">✓</span>':''}</div>`;}).join('');
+  const updates=(p.updates||[]).slice().reverse().map(u=>`<div class="upd-entry"><div class="upd-date">📅 ${fd(u.fecha)}</div><div class="upd-text">${esc(u.texto)}</div></div>`).join('')||'<div style="color:var(--text2);font-size:13px">Sin actualizaciones aún.</div>';
+  const pdfsHtml=(p.pdfs||[]).length===0?'<p style="font-size:12px;color:var(--text2)">Sin documentos aún.</p>':(p.pdfs||[]).map((pdf,i)=>`<div class="pdf-item"><div><div style="font-size:13px;font-weight:500">📄 ${esc(pdf.nombre)}</div><div style="font-size:11px;color:var(--text2)">${pdf.palabras} palabras · ${fd(pdf.fecha)}</div></div><button class="btn btn-danger btn-sm" onclick="delPDF('${p.id}',${i})">✕</button></div>`).join('');
+  const guiones=p.guiones||[];
+  const defIdx=p.guionDefinitivo??-1;
+  const guionesHtml=guiones.length===0?`<div class="empty"><div class="ico">📄</div><p>Sin guiones aún.</p></div>`:guiones.slice().reverse().map((g,ri)=>{const i=guiones.length-1-ri;const isLast=ri===0,isDef=i===defIdx;return`<div class="g-card"><div class="g-hdr" onclick="toggleAcordeon('ac_${p.id}_${i}')"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:11px;color:var(--text2)">${isLast?'▼':'▶'}</span><span class="g-version">Guion V${i+1}</span><span class="g-date">${fd(g.fecha)}</span>${isDef?'<span class="g-def">⭐ DEFINITIVO</span>':''}${isLast?'<span style="font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(124,106,255,.15);color:var(--accent)">Última versión</span>':''}</div></div><div class="g-body" id="ac_${p.id}_${i}" style="display:${isLast?'block':'none'}"><div class="g-text expanded">${esc(g.contenido)}</div><div class="g-actions">${!isDef?`<button class="btn btn-green btn-sm" onclick="setDef('${p.id}',${i})">⭐ Marcar definitivo</button>`:''}<button class="btn btn-secondary btn-sm" onclick="editGuion('${p.id}',${i})">✏️ Editar</button><button class="btn btn-primary btn-sm" onclick="genDesde('${p.id}',${i})">🤖 Nueva versión desde esta</button></div></div></div>`;}).join('');
+  const mat=(p.material||[]).sort((a,b)=>parseInt(a.segInicio)-parseInt(b.segInicio));
+  const matHtml=mat.length===0?`<div class="empty"><div class="ico">🎞</div><p>Sin material registrado.</p></div>`:mat.map((m,i)=>`<div class="mat-item"><div class="mat-time">⏱ ${m.segInicio}s–${m.segFin}s</div><div style="flex:1"><div style="font-size:13px">${esc(m.desc)}</div>${m.enlace?`<a href="${m.enlace}" target="_blank" style="font-size:11px;color:var(--accent)">🔗 Referencia</a>`:''}</div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="mat-type">${m.tipo}</span><button class="btn btn-danger btn-sm" onclick="delMat('${p.id}',${i})">✕</button></div></div>`).join('');
+  const mins=p.miniaturas||[];
+  const guionDef=defIdx>=0&&p.guiones?.[defIdx]?p.guiones[defIdx].contenido:null;
+  const minsHtml=mins.length===0?`<div class="empty"><div class="ico">🖼</div><p>Sin ideas de miniatura.</p></div>`:mins.map((m,i)=>`<div class="min-card"><div style="display:flex;justify-content:space-between;align-items:start;gap:8px"><div><div style="font-size:13px;font-weight:600">${esc(m.variante||'Variante')}</div>${m.texto?`<div style="font-size:13px;font-weight:700;color:var(--yellow);margin:4px 0">"${esc(m.texto)}"</div>`:''}<p style="font-size:12px;color:var(--text2)">${esc(m.desc)}</p>${m.ctr?`<div style="font-size:11px;color:var(--green);margin-top:4px">📊 CTR: ${esc(m.ctr)}</div>`:''}${m.enlace?`<a href="${m.enlace}" target="_blank" style="font-size:11px;color:var(--accent)">🔗 Ref</a>`:''}</div><button class="btn btn-danger btn-sm" onclick="delMin('${p.id}',${i})">✕</button></div></div>`).join('');
+  const miniSugs=['Dame 3 prompts para Ideogram','Analiza el CTR de mi concepto','¿Qué texto genera más curiosidad?','¿Qué emoción debería transmitir?','Sugiere variantes de color'];
+  const chatSugs=['Haz una versión más agresiva del guion','Dame 10 títulos para este video','¿Qué imágenes usarías entre el segundo 15 y 25?','Genera la descripción para YouTube','¿Qué me falta para terminar este proyecto?'];
+  const minTab=p.tipo==='Video largo'?`<div class="tab" onclick="swTab(this,'tb-min')">🖼 Miniaturas</div>`:'';
+  const minContent=p.tipo==='Video largo'?`<div class="tab-content" id="tb-min"><div style="display:flex;gap:20px;flex-wrap:wrap;width:100%"><div style="flex:1;min-width:260px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px"><h3 style="font-size:14px;font-weight:600">🖼 Ideas guardadas</h3><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="genPrompts('${p.id}')">🎨 Prompts Ideogram</button><button class="btn btn-secondary btn-sm" onclick="openModal('mMiniatura')">+ Manual</button></div></div>${minsHtml}<div id="ideoCont_${p.id}"></div></div><div style="flex:1;min-width:260px"><h3 style="font-size:14px;font-weight:600;margin-bottom:8px">🤖 Asistente Miniaturas</h3><div style="overflow-x:auto;white-space:nowrap;margin-bottom:8px">${miniSugs.map(s=>`<span class="chip" onclick="sendMiniChat('${p.id}','${s.replace(/'/g,"\\'")}')">💬 ${s}</span>`).join('')}</div><div class="chat-wrap" style="height:400px"><div class="chat-msgs" id="miniMsgs_${p.id}"><div class="chat-msg ai">Hola, asistente de miniaturas para <strong>${esc(p.titulo)}</strong>. ${guionDef?'Tengo el guion definitivo.':'Sin guion definitivo aún.'} ¿Empezamos?</div></div><div class="chat-foot"><textarea class="chat-input" id="miniIn_${p.id}" rows="2" placeholder="Escribe..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMiniChat('${p.id}')}"></textarea><button class="btn btn-primary" style="align-self:flex-end;flex-shrink:0" onclick="sendMiniChat('${p.id}')">Enviar</button></div></div></div></div></div>`:'';
+
+  return`<div class="back-btn" onclick="goBack()">← Volver</div>
+    <div class="proj-hdr">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+        <div><div class="proj-title">${esc(p.titulo)}</div><div class="proj-meta"><span class="mchip" style="color:${cc}">${ce} ${p.canal}</span><span class="mchip">${p.tipo}</span><span class="mchip">${fd(p.fecha)}</span><span class="mchip st-${p.estado}">${SL[p.estado]}</span></div></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><select class="fs btn-sm" onchange="changeEst('${p.id}',this.value)" style="width:auto">${Object.entries(SL).map(([k,v])=>`<option value="${k}" ${p.estado===k?'selected':''}>${v}</option>`).join('')}</select><button class="btn btn-danger btn-sm" onclick="delProj('${p.id}')">🗑</button></div>
+      </div>
+      <div style="background:var(--bg3);border-radius:8px;padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:13px;font-weight:600">Progreso</span><span style="font-size:22px;font-weight:700;color:var(--accent)">${pc}%</span></div>
+        <div class="pbar" style="height:10px"><div class="pbar-fill" style="width:${pc}%"></div></div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--text2)"><span>${p.phases?projPhaseIdx(p).filter(i=>p.phases[i]).length:0} de ${projPhaseIdx(p).length} fases</span><span class="st-${p.estado}">${SL[p.estado]}</span></div>
+      </div>
+    </div>
+    <div class="tabs"><div class="tab active" onclick="swTab(this,'tb-idea')">💡 Idea</div>${minTab}<div class="tab" onclick="swTab(this,'tb-guiones')">📄 Guiones</div><div class="tab" onclick="swTab(this,'tb-mat')">🎞 Material</div><div class="tab" onclick="swTab(this,'tb-prod')">📋 Producción</div><div class="tab" onclick="swTab(this,'tb-ai')">🤖 Asistente IA</div></div>
+    <div class="tab-content active" id="tb-idea">
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><h3 style="font-size:14px;font-weight:600">📝 Desarrollo</h3><button class="btn btn-primary btn-sm" onclick="saveDes('${p.id}')">Guardar</button></div><div class="editor-area"><div class="editor-content" contenteditable="true" id="desEd" data-placeholder="Escribe todo lo que tienes en mente...">${esc(p.desarrollo||'')}</div></div></div>
+        <div style="flex:1;min-width:260px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><h3 style="font-size:14px;font-weight:600">🔄 Actualizaciones</h3><button class="btn btn-secondary btn-sm" onclick="openModal('mUpdate')">+ Agregar</button></div>${updates}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-top:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px"><div><h3 style="font-size:14px;font-weight:600">📚 PDFs de referencia</h3><p style="font-size:11px;color:var(--text2);margin-top:2px">La IA usará estos documentos al generar guiones</p></div><label class="btn btn-secondary btn-sm" style="cursor:pointer">📄 Subir PDF<input type="file" accept=".pdf" style="display:none" onchange="subirPDF('${p.id}',this)"></label></div>
+        ${pdfsHtml}
+      </div>
+    </div>
+    ${minContent}
+    <div class="tab-content" id="tb-guiones">
+      <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center"><button class="btn btn-primary" onclick="genGuion('${p.id}')">🤖 Generar Guion con IA</button><button class="btn btn-secondary" onclick="genNuevaVer('${p.id}')">✨ Nueva versión mejorada</button><span style="font-size:12px;color:var(--text2)">${guiones.length} versión${guiones.length!==1?'es':''}</span></div>
+      ${guionesHtml}
+    </div>
+    <div class="tab-content" id="tb-mat">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px"><div><h3 style="font-size:14px;font-weight:600">🎞 Material para edición</h3><p style="font-size:11px;color:var(--text2)">Planifica recursos visuales segundo a segundo</p></div><button class="btn btn-secondary btn-sm" onclick="openModal('mMaterial')">+ Agregar elemento</button></div>
+      ${matHtml}
+    </div>
+    <div class="tab-content" id="tb-prod"><div class="checklist">${phases}</div></div>
+    <div class="tab-content" id="tb-ai">
+      <p style="font-size:12px;color:var(--text2);margin-bottom:10px">Conoce toda la ficha: idea, guiones, material y estado.</p>
+      <div style="overflow-x:auto;white-space:nowrap;margin-bottom:8px">${chatSugs.map(s=>`<span class="chip" onclick="sendChat('${p.id}','${s.replace(/'/g,"\\'")}')">💬 ${s}</span>`).join('')}</div>
+      <div class="chat-wrap" style="height:500px"><div class="chat-msgs" id="chatMsgs_${p.id}"><div class="chat-msg ai">¡Hola! Soy tu asistente para <strong>${esc(p.titulo)}</strong>. ¿En qué te ayudo?</div></div><div class="chat-foot"><textarea class="chat-input" id="chatIn_${p.id}" rows="2" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat('${p.id}')}"></textarea><button class="btn btn-primary" style="align-self:flex-end;flex-shrink:0" onclick="sendChat('${p.id}')">Enviar</button></div></div>
+    </div>`;
+}
+
+function swTab(el,tabId){
+  el.closest('.tabs').querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('screen-project').querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
+function toggleAcordeon(id){
+  const el=document.getElementById(id);if(!el)return;
+  const arrow=el.previousElementSibling?.querySelector('span');
+  if(el.style.display==='none'){el.style.display='block';if(arrow)arrow.textContent='▼';}
+  else{el.style.display='none';if(arrow)arrow.textContent='▶';}
+}
+
+function openNewModal(canal,estado){
+  if(canal)document.getElementById('nCan').value=canal;
+  if(estado)document.getElementById('nEst').value=estado;
+  document.getElementById('nTit').value='';
+  document.getElementById('nDes').value='';
+  openModal('mNuevo');
+}
+function createProject(){
+  const tit=document.getElementById('nTit').value.trim();
+  if(!tit){alert('El título es obligatorio');return;}
+  const d=getData();
+  d.projects.push({id:gid(),titulo:tit,canal:document.getElementById('nCan').value,tipo:document.getElementById('nTipo').value,estado:document.getElementById('nEst').value,fecha:now(),desarrollo:document.getElementById('nDes').value,phases:new Array(PHASES.length).fill(false),updates:[],guiones:[],material:[],miniaturas:[],pdfs:[],chatHistory:[],miniChatHistory:[]});
+  saveData(d);closeModal('mNuevo');
+  if(curScreen==='dashboard')renderDash();
+  else if(curScreen==='canal-c')renderKanban('Crónibol');
+  else if(curScreen==='canal-l')renderKanban('Lógica de Vida');
+  showToast('✓ Proyecto creado');
+}
+function togglePhase(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.phases[idx]=!p.phases[idx];
+  p.estado=autoEstado(p.phases);
+  saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-prod"]');
+  if(t)swTab(t,'tb-prod');
+  showToast(`${p.phases[idx]?'✓ Fase completada':'↩ Desmarcada'} · ${SL[p.estado]}`);
+}
+function changeEst(id,val){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.estado=val;saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+}
+function delProj(id){
+  if(!confirm('¿Eliminar este proyecto?'))return;
+  const d=getData();d.projects=d.projects.filter(x=>x.id!==id);saveData(d);goBack();
+}
+function saveDes(id){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.desarrollo=document.getElementById('desEd').innerHTML;saveData(d);showToast('✓ Guardado');
+}
+let pendingProjId=null;
+function openModal(id){pendingProjId=curProject;document.getElementById(id).classList.add('open');}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+function saveUpdate(){
+  const txt=document.getElementById('updText').value.trim();
+  if(!txt||!pendingProjId)return;
+  const d=getData(),p=d.projects.find(x=>x.id===pendingProjId);if(!p)return;
+  if(!p.updates)p.updates=[];
+  p.updates.push({fecha:now(),texto:txt});saveData(d);
+  closeModal('mUpdate');document.getElementById('updText').value='';
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  showToast('✓ Actualización guardada');
+}
+function saveMaterial(){
+  const desc=document.getElementById('mDesc').value.trim();
+  if(!desc||!pendingProjId){alert('La descripción es obligatoria');return;}
+  const d=getData(),p=d.projects.find(x=>x.id===pendingProjId);if(!p)return;
+  if(!p.material)p.material=[];
+  p.material.push({segInicio:document.getElementById('mSI').value||'0',segFin:document.getElementById('mSF').value||'0',desc,tipo:document.getElementById('mTipo').value,enlace:document.getElementById('mEnlace').value.trim()});
+  saveData(d);closeModal('mMaterial');
+  ['mSI','mSF','mDesc','mEnlace'].forEach(i=>document.getElementById(i).value='');
+  document.getElementById('projContainer').innerHTML=buildProj(d.projects.find(x=>x.id===pendingProjId));
+  const t=document.querySelector('.tab[onclick*="tb-mat"]');if(t)swTab(t,'tb-mat');
+  showToast('✓ Material agregado');
+}
+function delMat(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.material.splice(idx,1);saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-mat"]');if(t)swTab(t,'tb-mat');
+}
+function saveMiniatura(){
+  const desc=document.getElementById('minDesc').value.trim();
+  if(!desc||!pendingProjId)return;
+  const d=getData(),p=d.projects.find(x=>x.id===pendingProjId);if(!p)return;
+  if(!p.miniaturas)p.miniaturas=[];
+  p.miniaturas.push({desc,texto:document.getElementById('minTxt').value.trim(),variante:document.getElementById('minVar').value.trim()||'Variante',enlace:document.getElementById('minEnl').value.trim(),fecha:now()});
+  saveData(d);closeModal('mMiniatura');
+  ['minDesc','minTxt','minVar','minEnl'].forEach(i=>document.getElementById(i).value='');
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-min"]');if(t)swTab(t,'tb-min');
+  showToast('✓ Miniatura guardada');
+}
+function delMin(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.miniaturas.splice(idx,1);saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-min"]');if(t)swTab(t,'tb-min');
+}
+function setDef(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  p.guionDefinitivo=idx;saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-guiones"]');if(t)swTab(t,'tb-guiones');
+  showToast('⭐ Guion definitivo marcado');
+}
+let _editGuionCtx=null;
+function editGuion(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p||!p.guiones[idx])return;
+  _editGuionCtx={id,idx};
+  document.getElementById('editGuionTa').value=p.guiones[idx].contenido;
+  openModal('mEditGuion');
+}
+function saveEditGuion(){
+  if(!_editGuionCtx)return;
+  const {id,idx}=_editGuionCtx;
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p||!p.guiones[idx])return;
+  p.guiones[idx].contenido=document.getElementById('editGuionTa').value;
+  saveData(d);
+  closeModal('mEditGuion');
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-guiones"]');if(t)swTab(t,'tb-guiones');
+}
+
+function fmtSeg(s){const m=Math.floor(s/60),sg=s%60;return m+':'+(sg<10?'0':'')+sg;}
+function buildGuionPrompt(p){
+  const updates=(p.updates||[]).map(u=>`[${fd(u.fecha)}] ${u.texto}`).join('\n');
+  const esShort=p.tipo==='Short';
+  const todo=(p.desarrollo||'')+' '+(p.updates||[]).map(u=>u.texto).join(' ');
+  const matchMin=todo.match(/(\d+)\s*min/i);
+  const durMin=matchMin?parseInt(matchMin[1]):(esShort?1:10);
+  const palabras=esShort?130:durMin*130;
+  const pdfsTexto=(p.pdfs||[]).map((pdf,i)=>`--- DOC ${i+1}: ${pdf.nombre} ---\n${pdf.texto.slice(0,3000)}`).join('\n\n');
+  let estructura='';
+  if(esShort){
+    estructura=`ESTRUCTURA SHORT (60s ~130 palabras):\n[0:00-0:05] Gancho\n[0:05-0:20] Desarrollo\n[0:20-0:50] Ejemplo\n[0:50-1:00] CTA`;
+  } else {
+    const bloques=['[0:00-0:30] GANCHO','[0:30-1:30] INTRODUCCIÓN Y PROMESA'];
+    let t=90;const segDes=Math.floor((durMin*60-180)/3);
+    for(let i=1;i<=3;i++){bloques.push(`[${fmtSeg(t)}-${fmtSeg(t+segDes)}] PUNTO ${i}`);t+=segDes;}
+    bloques.push(`[${fmtSeg(t)}-${fmtSeg(durMin*60-30)}] SÍNTESIS`);
+    bloques.push(`[${fmtSeg(durMin*60-30)}-${fmtSeg(durMin*60)}] CIERRE Y CTA`);
+    estructura=`ESTRUCTURA (${durMin} min ~${palabras} palabras):\n`+bloques.join('\n');
+  }
+  return`Eres guionista profesional YouTube especializado en ${p.canal==='Crónibol'?'fútbol':'desarrollo personal'}.
+FICHA: Título: ${p.titulo} | Canal: ${p.canal} | Tipo: ${p.tipo} | Duración: ${esShort?'60s':durMin+'min'} (~${palabras} palabras)
+IDEA: ${p.desarrollo||'(sin desarrollo)'}
+ACTUALIZACIONES: ${updates||'(ninguna)'}
+${pdfsTexto?`REFERENCIA:\n${pdfsTexto}`:''}
+INSTRUCCIONES: Escribe guion COMPLETO bloque por bloque. Texto REAL para voz en off. ~130 palabras/minuto. Tono conversacional. Ejemplos concretos.
+${estructura}
+Escribe el guion completo:`;
+}
+async function genGuion(id){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  showToast('🤖 Generando guion...');
+  try{const res=await callAI([{role:'user',content:buildGuionPrompt(p)}],2000);if(!p.guiones)p.guiones=[];p.guiones.push({fecha:now(),contenido:res});saveData(d);document.getElementById('projContainer').innerHTML=buildProj(p);const t=document.querySelector('.tab[onclick*="tb-guiones"]');if(t)swTab(t,'tb-guiones');showToast(`✓ Guion V${p.guiones.length} creado`);}catch(e){alert('Error: '+e.message);}
+}
+async function genNuevaVer(id){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  if(!p.guiones?.length){alert('Primero genera un guion base.');return;}
+  showToast('🤖 Generando nueva versión...');
+  const prompt=buildGuionPrompt(p)+'\n\nMejora el guion anterior:\n\n'+p.guiones[p.guiones.length-1].contenido;
+  try{const res=await callAI([{role:'user',content:prompt}],2000);p.guiones.push({fecha:now(),contenido:res});saveData(d);document.getElementById('projContainer').innerHTML=buildProj(p);const t=document.querySelector('.tab[onclick*="tb-guiones"]');if(t)swTab(t,'tb-guiones');showToast(`✓ Guion V${p.guiones.length} creado`);}catch(e){alert('Error: '+e.message);}
+}
+async function genDesde(id,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  showToast('🤖 Generando nueva versión...');
+  const prompt=buildGuionPrompt(p)+`\n\nToma como base V${idx+1}:\n\n`+p.guiones[idx].contenido;
+  try{const res=await callAI([{role:'user',content:prompt}],2000);p.guiones.push({fecha:now(),contenido:res});saveData(d);document.getElementById('projContainer').innerHTML=buildProj(p);const t=document.querySelector('.tab[onclick*="tb-guiones"]');if(t)swTab(t,'tb-guiones');showToast(`✓ Guion V${p.guiones.length} creado`);}catch(e){alert('Error: '+e.message);}
+}
+
+function buildMiniCtx(p){
+  const def=p.guionDefinitivo??-1;
+  const gDef=def>=0&&p.guiones?.[def]?p.guiones[def].contenido:null;
+  return`Título: ${p.titulo} | Canal: ${p.canal}\nIDEA: ${p.desarrollo||''}\nGUION: ${gDef||'(no definido)'}\nIDEAS ACTUALES: ${(p.miniaturas||[]).map((m,i)=>`${i+1}: "${m.texto||''}" — ${m.desc}`).join('\n')||'(ninguna)'}`;
+}
+async function genPrompts(id){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  const cont=document.getElementById('ideoCont_'+id);
+  cont.innerHTML='<div style="padding:14px;color:var(--text2);font-size:13px">🎨 Generando prompts...</div>';
+  const prompt=`Eres experto en miniaturas YouTube CTR.\n${buildMiniCtx(p)}\nGenera 3 prompts inglés para Ideogram:\n===PROMPT1===\nPROMPT: ...\nTEXTO: ...\nCONCEPTO: ...\nCTR: ...\n===PROMPT2===\n...\n===PROMPT3===\n...`;
+  try{
+    const res=await callAI([{role:'user',content:prompt}],1500);
+    const bloques=res.split(/===PROMPT\d+===/g).filter(b=>b.trim());
+    const getV=(b,l)=>{const m=b.match(new RegExp(l+':\\s*([^\\n]+)'));return m?m[1].trim():'';};
+    cont.innerHTML=`<div style="margin-top:14px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><h4 style="font-size:13px;font-weight:600;color:var(--accent)">🎨 Prompts Ideogram</h4><button class="btn btn-secondary btn-sm" onclick="genPrompts('${id}')">🔄 Nuevos</button></div>${bloques.map((b,i)=>{const pr=getV(b,'PROMPT'),tx=getV(b,'TEXTO'),co=getV(b,'CONCEPTO'),ct=getV(b,'CTR');return`<div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px"><div style="margin-bottom:8px"><span style="font-size:13px;font-weight:700;color:var(--accent)">${esc(co)}</span>${tx?`<div style="font-size:12px;color:var(--yellow)">"${esc(tx)}"</div>`:''}${ct?`<div style="font-size:11px;color:var(--green)">📊 ${esc(ct)}</div>`:''}</div><div style="font-size:12px;color:var(--text2);background:var(--bg2);padding:10px;border-radius:6px;word-break:break-word">${esc(pr)}</div><div style="display:flex;gap:6px;margin-top:8px"><button class="btn btn-secondary btn-sm" onclick="copyClip(this.dataset.t)" data-t="${pr.replace(/"/g,'&quot;')}">📋 Copiar</button><button class="btn btn-green btn-sm" onclick="guardarPrompt('${id}',this.dataset.p,this.dataset.t,this.dataset.c,this.dataset.r)" data-p="${pr.replace(/"/g,'&quot;')}" data-t="${tx.replace(/"/g,'&quot;')}" data-c="${co.replace(/"/g,'&quot;')}" data-r="${ct.replace(/"/g,'&quot;')}">💾 Guardar</button></div></div>`;}).join('')}</div>`;
+  }catch(e){cont.innerHTML=`<div style="color:var(--accent2);padding:10px">${e.message}</div>`;}
+}
+function guardarPrompt(id,pr,tx,co,ct){
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  if(!p.miniaturas)p.miniaturas=[];
+  p.miniaturas.push({desc:'Prompt: '+pr,texto:tx,variante:co,ctr:ct,enlace:'',fecha:now()});
+  saveData(d);document.getElementById('projContainer').innerHTML=buildProj(p);
+  const t=document.querySelector('.tab[onclick*="tb-min"]');if(t)swTab(t,'tb-min');
+  showToast('✓ Guardado');
+}
+function copyClip(txt){navigator.clipboard.writeText(txt).then(()=>showToast('📋 Copiado'));}
+async function sendMiniChat(id,sugg){
+  const input=document.getElementById('miniIn_'+id);
+  const msg=sugg||(input?.value.trim());if(!msg)return;
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  const cont=document.getElementById('miniMsgs_'+id);
+  if(input)input.value='';
+  cont.innerHTML+=`<div class="chat-msg user">${esc(msg)}</div>`;
+  const lid='ml_'+Date.now();
+  cont.innerHTML+=`<div class="chat-msg ai loading" id="${lid}">✍️ Pensando...</div>`;
+  cont.scrollTop=cont.scrollHeight;
+  if(!p.miniChatHistory)p.miniChatHistory=[];
+  p.miniChatHistory.push({role:'user',content:msg});
+  try{const res=await callAI(p.miniChatHistory,1200,`Experto miniaturas YouTube CTR.\n${buildMiniCtx(p)}`);p.miniChatHistory.push({role:'assistant',content:res});saveData(d);const el=document.getElementById(lid);if(el)el.outerHTML=`<div class="chat-msg ai">${esc(res)}</div>`;}
+  catch(e){const el=document.getElementById(lid);if(el)el.outerHTML=`<div class="chat-msg ai" style="color:var(--accent2)">Error: ${e.message}</div>`;}
+  cont.scrollTop=cont.scrollHeight;
+}
+
+function buildCtx(p){
+  const def=p.guionDefinitivo??-1;
+  const guiones=(p.guiones||[]).map((g,i)=>`V${i+1}${i===def?' [DEF]':''}:\n${g.contenido}`).join('\n---\n');
+  const mat=(p.material||[]).map(m=>`${m.segInicio}s-${m.segFin}s: ${m.desc}`).join('\n');
+  const upds=(p.updates||[]).map(u=>`[${fd(u.fecha)}] ${u.texto}`).join('\n');
+  return`${p.titulo} | ${p.canal} | ${p.estado} | ${pct(p)}%\nIDEA: ${p.desarrollo||''}\nACTUALIZACIONES: ${upds||'ninguna'}\nGUIONES: ${guiones||'ninguno'}\nMATERIAL: ${mat||'ninguno'}\nFASES OK: ${projPhaseIdx(p).filter(i=>p.phases&&p.phases[i]).map(i=>PHASES[i]).join(', ')||'ninguna'}`;
+}
+async function sendChat(id,sugg){
+  const input=document.getElementById('chatIn_'+id);
+  const msg=sugg||(input?.value.trim());if(!msg)return;
+  const d=getData(),p=d.projects.find(x=>x.id===id);if(!p)return;
+  const cont=document.getElementById('chatMsgs_'+id);
+  if(input)input.value='';
+  cont.innerHTML+=`<div class="chat-msg user">${esc(msg)}</div>`;
+  const lid='cl_'+Date.now();
+  cont.innerHTML+=`<div class="chat-msg ai loading" id="${lid}">✍️ Pensando...</div>`;
+  cont.scrollTop=cont.scrollHeight;
+  if(!p.chatHistory)p.chatHistory=[];
+  p.chatHistory.push({role:'user',content:msg});
+  try{const res=await callAI(p.chatHistory,1500,`Asistente producción YouTube. Directo y práctico.\n${buildCtx(p)}`);p.chatHistory.push({role:'assistant',content:res});saveData(d);const el=document.getElementById(lid);if(el)el.outerHTML=`<div class="chat-msg ai">${esc(res)}</div>`;}
+  catch(e){const el=document.getElementById(lid);if(el)el.outerHTML=`<div class="chat-msg ai" style="color:var(--accent2)">Error: ${e.message}</div>`;}
+  cont.scrollTop=cont.scrollHeight;
+}
+
+async function callAI(messages,maxTokens,system){
+  const body={messages,max_tokens:maxTokens};
+  if(system)body.system=system;
+  const res=await fetch('api.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(!res.ok){const e=await res.json();throw new Error(e.error||'Error API');}
+  const data=await res.json();
+  return data.content.map(c=>c.text||'').join('');
+}
+
+async function subirPDF(projId,input){
+  const file=input.files[0];if(!file)return;
+  showToast('📄 Extrayendo texto...');
+  try{
+    const text=await new Promise((res,rej)=>{
+      const r=new FileReader();
+      r.onload=async e=>{
+        try{
+          const bytes=new Uint8Array(e.target.result);
+          let str='';for(let i=0;i<bytes.length;i++)str+=String.fromCharCode(bytes[i]);
+          const blocks=str.match(/BT[\s\S]*?ET/g)||[];
+          let text='';
+          for(const b of blocks){const strings=b.match(/\(([^)]*)\)/g)||[];for(const s of strings){text+=s.slice(1,-1).replace(/\\n/g,'\n').replace(/\\r/g,' ').replace(/\\\(/g,'(').replace(/\\\)/g,')').replace(/\\\\/g,'\\')+' ';}text+='\n';}
+          res(text.replace(/\s{3,}/g,' ').trim());
+        }catch(err){rej(err);}
+      };
+      r.onerror=()=>rej(new Error('No se pudo leer'));
+      r.readAsArrayBuffer(file);
+    });
+    if(!text||text.trim().length<10){alert('No se pudo extraer texto.');return;}
+    const d=getData(),p=d.projects.find(x=>x.id===projId);if(!p)return;
+    if(!p.pdfs)p.pdfs=[];
+    p.pdfs.push({nombre:file.name,texto:text.trim(),palabras:text.trim().split(/\s+/).length,fecha:now()});
+    saveData(d);document.getElementById('projContainer').innerHTML=buildProj(p);
+    showToast('✓ PDF cargado: '+file.name);
+  }catch(e){alert('Error: '+e.message);}
+}
+function delPDF(projId,idx){
+  const d=getData(),p=d.projects.find(x=>x.id===projId);if(!p)return;
+  p.pdfs.splice(idx,1);saveData(d);
+  document.getElementById('projContainer').innerHTML=buildProj(p);
+  showToast('✓ PDF eliminado');
+}
+
+function showMetaModal(){
+  document.getElementById('metaN').value='';
+  document.getElementById('metaObj').value='';
+  document.getElementById('metaFin').value='';
+  document.getElementById('metaIni').value=new Date().toISOString().slice(0,10);
+  openModal('mMeta');
+}
+function crearMeta(){
+  const nombre=document.getElementById('metaN').value.trim();
+  const obj=parseInt(document.getElementById('metaObj').value);
+  const fin=document.getElementById('metaFin').value;
+  if(!nombre||!obj||!fin){alert('Completa nombre, objetivo y fecha límite');return;}
+  const d=getData();if(!d.metas)d.metas=[];
+  d.metas.push({id:gid(),nombre,canal:document.getElementById('metaCan').value,objetivo:obj,inicio:document.getElementById('metaIni').value,fin,fecha:now(),completada:false});
+  saveData(d);closeModal('mMeta');renderMetas();showToast('✓ Meta creada');
+}
+function contarPub(canal,inicio,fin){
+  return getData().projects.filter(p=>{
+    if(p.estado!=='publicado')return false;
+    if(canal!=='ambos'&&p.canal!==canal)return false;
+    const f=p.fecha?.slice(0,10)||'';
+    return(!inicio||f>=inicio)&&(!fin||f<=fin);
+  }).length;
+}
+function diasRest(fin){
+  const h=new Date();h.setHours(0,0,0,0);
+  return Math.ceil((new Date(fin+'T00:00:00')-h)/(1000*60*60*24));
+}
+function delMeta(id){
+  if(!confirm('¿Eliminar meta?'))return;
+  const d=getData();d.metas=(d.metas||[]).filter(m=>m.id!==id);saveData(d);renderMetas();
+}
+function renderMetas(){
+  const d=getData(),metas=d.metas||[],ps=d.projects||[];
+  const pubC=ps.filter(p=>p.estado==='publicado'&&p.canal==='Crónibol').length;
+  const pubL=ps.filter(p=>p.estado==='publicado'&&p.canal==='Lógica de Vida').length;
+  const cc=c=>c==='Crónibol'?'var(--cronibol)':c==='Lógica de Vida'?'var(--logica)':'var(--accent)';
+  const ce=c=>c==='Crónibol'?'⚽':c==='Lógica de Vida'?'🧠':'🌐';
+  const metaCard=m=>{
+    const prog=contarPub(m.canal,m.inicio,m.fin);
+    const pp=Math.min(100,Math.round(prog/m.objetivo*100));
+    const dias=diasRest(m.fin),ok=prog>=m.objetivo,venc=dias<0&&!ok;
+    if(ok&&!m.completada){m.completada=true;saveData(d);}
+    const col=cc(m.canal);
+    return`<div class="meta-card" style="border-color:${ok?'var(--green)':venc?'var(--accent2)':col}">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:12px">
+        <div><div style="font-size:16px;font-weight:700;margin-bottom:6px">${ok?'🎉 ':''}${esc(m.nombre)}</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span style="font-size:11px;padding:2px 10px;border-radius:20px;background:var(--bg3);color:${col}">${ce(m.canal)} ${m.canal==='ambos'?'Ambos':m.canal}</span>
+          <span style="font-size:11px;padding:2px 10px;border-radius:20px;background:var(--bg3);color:var(--text2)">📅 hasta ${new Date(m.fin+'T00:00:00').toLocaleDateString('es-CO',{day:'2-digit',month:'short',year:'numeric'})}</span>
+          ${ok?'<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:rgba(74,222,128,.15);color:var(--green)">✅ Completada</span>':venc?'<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:rgba(255,100,100,.15);color:var(--accent2)">⏰ Vencida</span>':`<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:var(--bg3);color:var(--text2)">${dias===0?'⚠️ Hoy':dias>0?'⏳ '+dias+'d':''}</span>`}
+        </div></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="text-align:right"><div style="font-size:28px;font-weight:700;color:${ok?'var(--green)':col}">${prog}<span style="font-size:14px;color:var(--text2)">/${m.objetivo}</span></div><div style="font-size:11px;color:var(--text2)">publicados</div></div>
+          <button class="btn btn-danger btn-sm" onclick="delMeta('${m.id}')">🗑</button>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-bottom:5px"><span>Progreso</span><span>${pp}%</span></div>
+      <div class="pbar" style="height:10px"><div style="height:100%;border-radius:20px;background:${ok?'var(--green)':venc?'var(--accent2)':col};width:${pp}%;transition:width .5s"></div></div>
+      ${!ok&&!venc?`<div style="font-size:12px;color:var(--text2);margin-top:8px">Faltan <strong style="color:${col}">${m.objetivo-prog}</strong> videos</div>`:''}
+    </div>`;
+  };
+  const activas=metas.filter(m=>!m.completada),hechas=metas.filter(m=>m.completada);
+  document.getElementById('metasContent').innerHTML=`
+    <div class="stats-grid" style="margin-bottom:24px">
+      <div class="stat-card stat-a"><div class="lbl">🌐 Total publicados</div><div class="val">${pubC+pubL}</div><div class="sub">ambos canales</div></div>
+      <div class="stat-card stat-c"><div class="lbl">⚽ Crónibol</div><div class="val" style="color:var(--cronibol)">${pubC}</div><div class="sub">publicados</div></div>
+      <div class="stat-card stat-l"><div class="lbl">🧠 Lógica de Vida</div><div class="val" style="color:var(--logica)">${pubL}</div><div class="sub">publicados</div></div>
+      <div class="stat-card stat-y"><div class="lbl">🎯 Metas activas</div><div class="val" style="color:var(--yellow)">${activas.length}</div><div class="sub">${hechas.length} completadas</div></div>
+    </div>
+    ${metas.length===0?'<div class="empty"><div class="ico">🎯</div><p style="font-size:15px;font-weight:600;margin-bottom:8px">Sin metas</p><p>Crea tu primera meta de publicación.</p></div>':`${activas.length>0?`<h3 style="font-size:13px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px">🎯 Activas</h3>${activas.map(metaCard).join('')}`:''}${hechas.length>0?`<h3 style="font-size:13px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin:20px 0 14px">✅ Completadas</h3>${hechas.map(metaCard).join('')}`:''}`}`;
+}
+function renderMetasDash(){
+  const d=getData(),metas=(d.metas||[]).filter(m=>!m.completada);
+  const el=document.getElementById('dMetas');if(!el)return;
+  if(!metas.length){el.innerHTML='<div style="color:var(--text2);font-size:13px;padding:10px 0">Sin metas activas.</div>';return;}
+  el.innerHTML=metas.slice(0,3).map(m=>{
+    const prog=contarPub(m.canal,m.inicio,m.fin);
+    const pp=Math.min(100,Math.round(prog/m.objetivo*100));
+    const col=m.canal==='Crónibol'?'var(--cronibol)':m.canal==='Lógica de Vida'?'var(--logica)':'var(--accent)';
+    return`<div style="padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer" onclick="goNav('metas')"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:13px;font-weight:500">${esc(m.nombre)}</span><span style="font-size:12px;color:${col}">${prog}/${m.objetivo}</span></div><div class="pbar" style="height:5px"><div style="height:100%;border-radius:20px;background:${col};width:${pp}%"></div></div></div>`;
+  }).join('');
+}
+
+function doSearch(){
+  const q=(document.getElementById('sInput')?.value||'').toLowerCase();
+  const can=document.getElementById('fCanal')?.value||'';
+  const est=document.getElementById('fEstado')?.value||'';
+  const tip=document.getElementById('fTipo')?.value||'';
+  let ps=getData().projects;
+  if(q)ps=ps.filter(p=>p.titulo.toLowerCase().includes(q)||(p.desarrollo||'').toLowerCase().includes(q));
+  if(can)ps=ps.filter(p=>p.canal===can);
+  if(est)ps=ps.filter(p=>p.estado===est);
+  if(tip)ps=ps.filter(p=>p.tipo===tip);
+  const cont=document.getElementById('sResults');
+  if(!ps.length){cont.innerHTML='<div class="empty"><div class="ico">🔍</div><p>Sin resultados</p></div>';return;}
+  cont.innerHTML=ps.map(p=>`<div class="k-card" style="margin-bottom:10px" onclick="openProj('${p.id}')"><div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:6px"><div class="k-card-title">${esc(p.titulo)}</div><span class="cpill ${p.canal==='Crónibol'?'cpill-c':'cpill-l'}">${p.canal}</span></div><div style="display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--text2);margin-bottom:8px"><span>${fd(p.fecha)}</span><span class="tbadge ${p.tipo==='Short'?'t-short':'t-largo'}">${p.tipo}</span><span class="st-${p.estado}">${SL[p.estado]}</span></div><div style="display:flex;align-items:center;gap:8px"><div class="pbar" style="height:5px;flex:1"><div class="pbar-fill" style="width:${pct(p)}%"></div></div><span style="font-size:11px;color:var(--text2)">${pct(p)}%</span></div></div>`).join('');
+}
+
+function exportData(){
+  const b=new Blob([JSON.stringify(getData(),null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='ytStudio_'+new Date().toISOString().slice(0,10)+'.json';a.click();
+}
+function importData(e){
+  const r=new FileReader();
+  r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(d.projects){saveData(d);showToast('✓ Datos importados');renderDash();}}catch{alert('Error al leer');}};
+  r.readAsText(e.target.files[0]);
+}
+
+function showToast(msg,dur){
+  dur=dur||2500;
+  const t=document.createElement('div');
+  t.style.cssText='position:fixed;bottom:24px;right:24px;background:var(--bg2);border:1px solid var(--accent);color:var(--text);padding:12px 18px;border-radius:10px;font-size:13px;z-index:9999;box-shadow:var(--shadow)';
+  t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.remove();},dur);
+}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(function(m){m.classList.remove('open');});});
+document.querySelectorAll('.modal-overlay').forEach(function(m){m.addEventListener('click',function(e){if(e.target===m)m.classList.remove('open');});});
+
+// Siempre cargar desde servidor al iniciar
+fetch('save.php').then(function(r){return r.json();}).then(function(d){
+  if(d&&d.projects){
+    localStorage.setItem('ytStudio',JSON.stringify(d));
+    renderDash();
+  }
+}).catch(function(){});
+
+renderDash();
+</script>
+</body>
+</html>
